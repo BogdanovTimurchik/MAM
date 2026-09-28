@@ -1,0 +1,6 @@
+{
+  "name": "Maryam Academy Mission (MAM) - EdTech Ecosystem",
+  "description": "Production-ready EdTech digital ecosystem for Maryam Academy Mission featuring high-converting landing page, student & parent mobile portal, admin CRM operations center, and marketing collateral.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maryam Academy Mission (MAM) — IT va Xorijiy Tillar Akademiyasi | Академия IT и Языков</title>
+  <meta name="description" content="Maryam Academy Mission (MAM) — Запишитесь на пробный урок в Маргилане. Курсы программирования Python, Веб-разработки, UI/UX, IELTS, Немецкого и Корейского языков." />
+  <meta property="og:title" content="Maryam Academy Mission (MAM) - EdTech Ecosystem" />
+  <meta property="og:description" content="Production-ready EdTech digital ecosystem for Maryam Academy Mission featuring high-converting landing page, student & parent mobile portal, and course enrollment in Margilan." />
+  
+  <!-- Tailwind CSS CDN with dark mode support -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Subtle dot grid pattern */
+    .bg-grid-pattern {
+      background-image: radial-gradient(rgba(16, 185, 129, 0.12) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .dark .bg-grid-pattern {
+      background-image: radial-gradient(rgba(52, 211, 153, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200 antialiased selection:bg-emerald-500 selection:text-white pb-20 lg:pb-0">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/85 dark:bg-slate-900/85 border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="relative w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-tr from-emerald-600 via-teal-500 to-indigo-600 shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform duration-200">
+            <!-- Vector SVG Logo -->
+            <svg class="w-7 h-7 text-white" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Academic Cap Top -->
+              <path d="M20 7L4 15L20 23L36 15L20 7Z" fill="white" fill-opacity="0.95"/>
+              <!-- Code brackets integrated in cap body -->
+              <path d="M12 21V28C12 31.5 15.5 34 20 34C24.5 34 28 31.5 28 28V21L20 25.5L12 21Z" fill="white" fill-opacity="0.75"/>
+              <path d="M15 24.5L13.5 26.5L15 28.5" stroke="#064e3b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M25 24.5L26.5 26.5L25 28.5" stroke="#064e3b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Digital Pixel Nodes -->
+              <circle cx="36" cy="15" r="2.5" fill="#34d399"/>
+              <path d="M36 17.5V25" stroke="#34d399" stroke-width="1.5" stroke-dasharray="2 2"/>
+              <rect x="34.5" y="25" width="3" height="4" rx="1" fill="#34d399"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-lg font-bold tracking-tight leading-none text-slate-900 dark:text-white flex items-center gap-1.5">
+              <span>Maryam Academy</span>
+              <span class="px-1.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">MAM</span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium tracking-tight mt-0.5" data-i18n="logoSubtitle">Mission of IT & Languages</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-5 text-sm font-medium text-slate-600 dark:text-slate-300">
+          <a href="#courses" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" data-i18n="navCourses">Курсы</a>
+          <a href="#teachers" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" data-i18n="navTeachers">Преподаватели</a>
+          <a href="#campus-map" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center gap-1">
+            <span data-i18n="navMap">Карта кабинетов</span>
+            <span class="px-1.5 py-0.5 text-[9px] font-bold rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">2D</span>
+          </a>
+          <a href="#balance" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" data-i18n="navBalance">Проверка баланса</a>
+          <a href="#certificate" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" data-i18n="navCertificate">Сертификаты</a>
+          <a href="#faq" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" data-i18n="navFaq">FAQ</a>
+          <a href="#contacts" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" data-i18n="navContacts">Контакты</a>
+        </nav>
+
+        <!-- Header Actions: Lang, Theme & Trial Button -->
+        <div class="flex items-center gap-3">
+          
+          <!-- Language Toggle (RU / UZ) -->
+          <div class="flex items-center bg-slate-100 dark:bg-slate-800 rounded-lg p-0.5 border border-slate-200 dark:border-slate-700 text-xs font-semibold">
+            <button id="langRuBtn" onclick="setLanguage('ru')" class="px-2.5 py-1.5 rounded-md transition-all bg-white dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 shadow-sm">RU</button>
+            <button id="langUzBtn" onclick="setLanguage('uz')" class="px-2.5 py-1.5 rounded-md transition-all text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200">UZ</button>
+          </div>
+
+          <!-- Theme Toggle Button -->
+          <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Toggle theme">
+            <i id="themeIcon" data-lucide="moon" class="w-5 h-5"></i>
+          </button>
+
+          <!-- Book Trial Button -->
+          <button onclick="openBookingModal()" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-semibold text-sm shadow-md shadow-emerald-600/20 transition-all">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span data-i18n="btnBookTrial">Записаться на пробный урок</span>
+          </button>
+
+          <!-- Mobile Menu Trigger -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3">
+      <a href="#courses" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600" data-i18n="navCourses">Курсы</a>
+      <a href="#teachers" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600" data-i18n="navTeachers">Преподаватели</a>
+      <a href="#campus-map" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600" data-i18n="navMap">Карта кабинетов (2D)</a>
+      <a href="#balance" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600" data-i18n="navBalance">Проверка баланса</a>
+      <a href="#certificate" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600" data-i18n="navCertificate">Сертификаты</a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600" data-i18n="navFaq">FAQ</a>
+      <a href="#contacts" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600" data-i18n="navContacts">Контакты</a>
+      <div class="pt-2">
+        <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-emerald-600 text-white font-semibold text-sm">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span data-i18n="btnBookTrial">Записаться на пробный урок</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-grid-pattern">
+    <!-- Ambient Glow effects -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 right-10 w-72 h-72 bg-indigo-500/10 dark:bg-indigo-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center max-w-3xl mx-auto">
+        
+        <!-- Live Enrollment Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm font-semibold mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span data-i18n="heroBadge">Набор открыт: Сезон 2025–2026 • Маргилан</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] mb-6">
+          <span data-i18n="heroTitlePart1">Освой IT и Иностранные Языки в</span>
+          <span class="bg-gradient-to-r from-emerald-600 via-teal-500 to-indigo-600 bg-clip-text text-transparent"> Академии MAM</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-10 max-w-2xl mx-auto" data-i18n="heroSubtitle">
+          Практико-ориентированное обучение для будущих инженеров, разработчиков и полиглотов. Персональные ноутбуки ThinkPad, мини-группы до 6 человек и международные стандарты.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <button onclick="openBookingModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-base shadow-lg shadow-emerald-600/25 transition-all">
+            <i data-lucide="calendar-check" class="w-5 h-5"></i>
+            <span data-i18n="heroBtnTrial">Записаться на Sinov Darsi</span>
+          </button>
+          <a href="#courses" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold text-base border border-slate-200 dark:border-slate-800 transition-colors">
+            <i data-lucide="book-open" class="w-5 h-5 text-emerald-500"></i>
+            <span data-i18n="heroBtnCourses">Смотреть курсы</span>
+          </a>
+        </div>
+
+        <!-- Metric Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono">1 200+</div>
+            <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1" data-i18n="metric1">Выпускников академии</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+            <div class="text-2xl sm:text-3xl font-extrabold text-indigo-600 dark:text-indigo-400 font-mono">до 6</div>
+            <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1" data-i18n="metric2">Учеников в группе</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+            <div class="text-2xl sm:text-3xl font-extrabold text-teal-600 dark:text-teal-400 font-mono">100%</div>
+            <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1" data-i18n="metric3">Оборудование 1:1</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono">8.0+</div>
+            <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1" data-i18n="metric4">IELTS & TOPIK топ</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COURSES SECTION ==================== -->
+  <section id="courses" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2" data-i18n="coursesSubhead">Направления обучения</h2>
+        <p class="text-3xl font-extrabold text-slate-900 dark:text-white" data-i18n="coursesTitle">Программы курсов Maryam Academy</p>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2" data-i18n="coursesDesc">Два ключевых крыла академии: передовые IT-профессии и международные языковые квалификации.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex justify-center mb-10">
+        <div class="inline-flex p-1 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm text-sm font-semibold">
+          <button id="tabAll" onclick="filterCourses('all')" class="px-5 py-2 rounded-lg bg-emerald-600 text-white transition-all">
+            <span data-i18n="filterAll">Все курсы</span>
+          </button>
+          <button id="tabIt" onclick="filterCourses('it')" class="px-5 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-emerald-600 transition-all">
+            💻 <span data-i18n="filterIt">IT-Направление</span>
+          </button>
+          <button id="tabLang" onclick="filterCourses('lang')" class="px-5 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-emerald-600 transition-all">
+            🗣 <span data-i18n="filterLang">Языковое Направление</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Course Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- 1. Python -->
+        <div class="course-card it-course bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:border-emerald-500/50 transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                <i data-lucide="code" class="w-3.5 h-3.5"></i> IT-Направление
+              </span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 font-mono">6 месяцев</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors" data-i18n="c1Title">Python-программирование</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4" data-i18n="c1Desc">Алгоритмы, автоматизация, разработка Telegram-ботов, работа с базами данных SQLite/PostgreSQL и фреймворками Django/FastAPI.</p>
+            <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400 mb-6 border-t border-slate-100 dark:border-slate-800 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="c1Point1">Синтаксис, ООП и структуры данных</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="c1Point2">4 полноценных проекта в портфолио</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="c1Point3">Сертификат государственного образца MAM</span></li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Python-программирование')" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white dark:bg-slate-800 dark:hover:bg-emerald-600 text-slate-800 dark:text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+            <span data-i18n="btnSelectCourse">Записаться на курс</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- 2. Web Development -->
+        <div class="course-card it-course bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:border-emerald-500/50 transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                <i data-lucide="globe" class="w-3.5 h-3.5"></i> IT-Направление
+              </span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 font-mono">8 месяцев</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors" data-i18n="c2Title">Веб-разработка (Frontend / Backend)</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4" data-i18n="c2Desc">Полный стек веб-инженерии: HTML5, CSS3, JavaScript ES6+, React, Node.js, Tailwind CSS и основы архитектуры REST API.</p>
+            <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400 mb-6 border-t border-slate-100 dark:border-slate-800 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="c2Point1">Интерактивные SPA-сайты и адаптивная вёрстка</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="c2Point2">Деплой проектов на Vercel и GitHub</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="c2Point3">Командный хакатон и стажировка</span></li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Веб-разработка (Frontend/Backend)')" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white dark:bg-slate-800 dark:hover:bg-emerald-600 text-slate-800 dark:text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+            <span data-i18n="btnSelectCourse">Записаться на курс</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- 3. UI/UX Design -->
+        <div class="course-card it-course bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:border-emerald-500/50 transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                <i data-lucide="palette" class="w-3.5 h-3.5"></i> IT-Направление
+              </span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 font-mono">4 месяца</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors" data-i18n="c3Title">UI/UX Дизайн & Figma</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4" data-i18n="c3Desc">Проектирование пользовательских интерфейсов, мобильных приложений iOS/Android, создание дизайн-систем, юзабилити-тестирование.</p>
+            <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400 mb-6 border-t border-slate-100 dark:border-slate-800 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="c3Point1">Figma Components, Auto-Layout, Variables</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="c3Point2">Портфолио на Behance и Dribbble</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="c3Point3">Дизайн реальных мобильных приложений</span></li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('UI/UX Дизайн')" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white dark:bg-slate-800 dark:hover:bg-emerald-600 text-slate-800 dark:text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+            <span data-i18n="btnSelectCourse">Записаться на курс</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- 4. English IELTS -->
+        <div class="course-card lang-course bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:border-indigo-500/50 transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                <i data-lucide="languages" class="w-3.5 h-3.5"></i> Языковое Направление
+              </span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 font-mono">6–9 месяцев</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" data-i18n="c4Title">Английский язык (IELTS 7.5+)</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4" data-i18n="c4Desc">Интенсивная подготовка по всем секциям: Speaking, Writing Tasks 1 & 2, Reading и Listening с сертифицированными инструкторами.</p>
+            <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400 mb-6 border-t border-slate-100 dark:border-slate-800 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> <span data-i18n="c4Point1">Еженедельные Mock-экзамены в реальном тайминге</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> <span data-i18n="c4Point2">Разговорный клуб с носителями каждую субботу</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> <span data-i18n="c4Point3">Помощь при подаче в зарубежные вузы</span></li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Английский язык (IELTS)')" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-indigo-600 hover:text-white dark:bg-slate-800 dark:hover:bg-indigo-600 text-slate-800 dark:text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+            <span data-i18n="btnSelectCourse">Записаться на курс</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- 5. German Goethe -->
+        <div class="course-card lang-course bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:border-indigo-500/50 transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                <i data-lucide="languages" class="w-3.5 h-3.5"></i> Языковое Направление
+              </span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 font-mono">5–8 месяцев</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" data-i18n="c5Title">Немецкий язык (Goethe A1–B2)</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4" data-i18n="c5Desc">Академический немецкий для поступления в Studienkolleg, университеты Германии и программ трудоустройства Ausbildung.</p>
+            <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400 mb-6 border-t border-slate-100 dark:border-slate-800 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> <span data-i18n="c5Point1">Подготовка к сдаче Goethe-Zertifikat и ÖSD</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> <span data-i18n="c5Point2">Грамматический интенсив и живая речь</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> <span data-i18n="c5Point3">Консультация по визам и документам</span></li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Немецкий язык (Goethe)')" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-indigo-600 hover:text-white dark:bg-slate-800 dark:hover:bg-indigo-600 text-slate-800 dark:text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+            <span data-i18n="btnSelectCourse">Записаться на курс</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- 6. Korean TOPIK -->
+        <div class="course-card lang-course bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:border-indigo-500/50 transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                <i data-lucide="languages" class="w-3.5 h-3.5"></i> Языковое Направление
+              </span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 font-mono">6 месяцев</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" data-i18n="c6Title">Корейский язык (TOPIK I & II)</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4" data-i18n="c6Desc">Изучение хангула, грамматики и словарного запаса для сдачи TOPIK от 3 до 5 гыпа и поступления на правительственные гранты GKS.</p>
+            <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400 mb-6 border-t border-slate-100 dark:border-slate-800 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> <span data-i18n="c6Point1">Отработка тестов TOPIK прошлых лет</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> <span data-i18n="c6Point2">Письмо и эссе на корейском (Ссоги)</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> <span data-i18n="c6Point3">Подготовка портфолио для корейских вузов</span></li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Корейский язык (TOPIK)')" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-indigo-600 hover:text-white dark:bg-slate-800 dark:hover:bg-indigo-600 text-slate-800 dark:text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+            <span data-i18n="btnSelectCourse">Записаться на курс</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUICK TRIAL BOOKING SECTION ==================== -->
+  <section id="trial" class="py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-3xl p-8 sm:p-12 text-white shadow-xl shadow-emerald-700/20 relative">
+        <div class="max-w-2xl">
+          <span class="inline-block px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-wider mb-4" data-i18n="trialBadge">Бесплатный Sinov Darsi</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-4" data-i18n="trialTitle">Запишитесь на первое пробное занятие</h2>
+          <p class="text-emerald-100 text-sm sm:text-base mb-8" data-i18n="trialSubtitle">Ученик познакомится с преподавателем, протестирует индивидуальный ноутбук и решит свои первые практические задачи. Без скрытых платежей.</p>
+        </div>
+
+        <!-- Booking Form -->
+        <form id="inlineBookingForm" onsubmit="handleInlineBooking(event)" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            
+            <!-- Student Name -->
+            <div>
+              <label class="block text-xs font-semibold text-emerald-100 mb-1" data-i18n="formNameLabel">ФИО Ученика</label>
+              <input type="text" id="inlineStudentName" required placeholder="Азизбек Каримов" class="w-full px-4 py-3 rounded-xl bg-white text-slate-900 placeholder:text-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-emerald-300">
+            </div>
+
+            <!-- Course Selection -->
+            <div>
+              <label class="block text-xs font-semibold text-emerald-100 mb-1" data-i18n="formCourseLabel">Выбор курса</label>
+              <select id="inlineCourseSelect" required class="w-full px-4 py-3 rounded-xl bg-white text-slate-900 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-emerald-300">
+                <option value="Python-программирование">Python-программирование</option>
+                <option value="Веб-разработка (Frontend/Backend)">Веб-разработка (Frontend/Backend)</option>
+                <option value="UI/UX Дизайн">UI/UX Дизайн & Figma</option>
+                <option value="Английский язык (IELTS)">Английский язык (IELTS)</option>
+                <option value="Немецкий язык (Goethe)">Немецкий язык (Goethe)</option>
+                <option value="Корейский язык (TOPIK)">Корейский язык (TOPIK)</option>
+              </select>
+            </div>
+
+            <!-- Phone with Mask -->
+            <div>
+              <label class="block text-xs font-semibold text-emerald-100 mb-1" data-i18n="formPhoneLabel">Номер телефона</label>
+              <input type="tel" id="inlineStudentPhone" required value="+998 " placeholder="+998 (90) 123-45-67" class="w-full px-4 py-3 rounded-xl bg-white text-slate-900 placeholder:text-slate-400 text-sm font-medium font-mono focus:outline-none focus:ring-2 focus:ring-emerald-300">
+            </div>
+
+          </div>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-emerald-100/90 flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+              <span data-i18n="trialFormGuarantee">Заявка сразу направляется администратору в Telegram</span>
+            </p>
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-slate-950 hover:bg-slate-900 active:bg-black text-white font-bold text-sm shadow-lg transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4 text-emerald-400"></i>
+              <span data-i18n="btnSubmitBooking">Записаться через Telegram</span>
+            </button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== BALANCE CHECK SECTION ==================== -->
+  <section id="balance" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto mb-3">
+          <i data-lucide="credit-card" class="w-6 h-6"></i>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white" data-i18n="balanceTitle">Экспресс-проверка баланса ученика</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2" data-i18n="balanceSubtitle">Введите номер телефона, привязанный к обучению в MAM, чтобы узнать статус абонемента и оставшиеся уроки.</p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <form onsubmit="handleCheckBalance(event)" class="flex flex-col sm:flex-row gap-3">
+          <div class="relative flex-1">
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </div>
+            <input type="tel" id="balancePhoneInput" value="+998 " required placeholder="+998 (90) 123-45-67" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-mono text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          </div>
+          <button type="submit" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2">
+            <i data-lucide="search" class="w-4 h-4"></i>
+            <span data-i18n="btnCheckBalance">Проверить</span>
+          </button>
+        </form>
+
+        <p class="text-xs text-slate-400 dark:text-slate-500 mt-2.5">
+          <span data-i18n="balanceHint">Демо-номера для теста:</span> <span class="font-mono text-emerald-600 dark:text-emerald-400 cursor-pointer" onclick="fillTestPhone('+998901234567')">+998 (90) 123-45-67</span> или <span class="font-mono text-emerald-600 dark:text-emerald-400 cursor-pointer" onclick="fillTestPhone('+998998887766')">+998 (99) 888-77-66</span>
+        </p>
+
+        <!-- Dynamic Balance Result Card -->
+        <div id="balanceResult" class="hidden mt-6 pt-6 border-t border-slate-100 dark:border-slate-800"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CERTIFICATE VERIFICATION SECTION ==================== -->
+  <section id="certificate" class="py-20 bg-white dark:bg-slate-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <div class="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mx-auto mb-3">
+          <i data-lucide="award" class="w-6 h-6"></i>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white" data-i18n="certTitle">Онлайн-проверка подлинности сертификата</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2" data-i18n="certSubtitle">Каждый диплом MAM имеет уникальный реестровый номер и подтверждается подписью Директора Богданова Т.Я.</p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <form onsubmit="handleCheckCertificate(event)" class="flex flex-col sm:flex-row gap-3">
+          <div class="relative flex-1">
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              <i data-lucide="shield-alert" class="w-4 h-4"></i>
+            </div>
+            <input type="text" id="certIdInput" required placeholder="Например: MAM-2024-0891" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-mono uppercase text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <button type="submit" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2">
+            <i data-lucide="check-check" class="w-4 h-4"></i>
+            <span data-i18n="btnCheckCert">Проверить диплом</span>
+          </button>
+        </form>
+
+        <p class="text-xs text-slate-400 dark:text-slate-500 mt-2.5">
+          <span data-i18n="certHint">Примеры реестра:</span> <span class="font-mono text-indigo-600 dark:text-indigo-400 cursor-pointer" onclick="fillTestCert('MAM-2024-0891')">MAM-2024-0891</span> или <span class="font-mono text-indigo-600 dark:text-indigo-400 cursor-pointer" onclick="fillTestCert('MAM-2025-1042')">MAM-2025-1042</span>
+        </p>
+
+        <!-- Dynamic Certificate Result Box -->
+        <div id="certResult" class="hidden mt-6 pt-6 border-t border-slate-100 dark:border-slate-800"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TEACHERS SECTION ==================== -->
+  <section id="teachers" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 text-xs font-bold mb-3 border border-emerald-300 dark:border-emerald-800">
+          <i data-lucide="video" class="w-3.5 h-3.5"></i>
+          <span data-i18n="teachersBadge">Reels / Shorts Формат 9:16</span>
+        </div>
+        <p class="text-3xl font-extrabold text-slate-900 dark:text-white" data-i18n="teachersTitle">Наши преподаватели и видео-визитки</p>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2" data-i18n="teachersDesc">Познакомьтесь с ментором за 15 секунд: посмотрите живое видео-приветствие перед записью на пробный урок.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Teacher 1: Python -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md hover:border-emerald-500/40 transition-all group relative overflow-hidden">
+          <div class="absolute top-0 right-0 left-0 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                <i data-lucide="terminal" class="w-3 h-3"></i> Кабинет 1 • Python
+              </span>
+              <span class="text-xs font-mono font-bold text-amber-500 flex items-center gap-1">
+                ⭐ 4.96
+              </span>
+            </div>
+
+            <div class="flex items-center gap-4 mb-4">
+              <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white flex items-center justify-center text-xl font-bold font-mono shadow-md shadow-emerald-600/20 shrink-0">
+                ИК
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white dark:border-slate-900"></span>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Исломбек Каримов</h3>
+                <p class="text-xs font-bold text-emerald-600 dark:text-emerald-400 font-mono">Senior Python & Backend</p>
+                <p class="text-[11px] text-slate-400 mt-0.5 font-mono">5+ лет коммерч. опыта</p>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Разработчик enterprise-бэкенда и Telegram-ботов. Автор авторской программы по алгоритмам и чистой архитектуре Django.</p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-mono">
+              <span>🎓 350+ учеников</span>
+              <span class="text-emerald-600 dark:text-emerald-400">10 ThinkPad мест</span>
+            </div>
+
+            <button onclick="openVideoReel(1)" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2 group/btn">
+              <div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center group-hover/btn:scale-110 transition-transform">
+                <i data-lucide="play" class="w-3 h-3 fill-current text-white"></i>
+              </div>
+              <span data-i18n="btnWatchReel">Смотреть видео-визитку (15 сек)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Teacher 2: Web Dev -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md hover:border-teal-500/40 transition-all group relative overflow-hidden">
+          <div class="absolute top-0 right-0 left-0 h-1.5 bg-gradient-to-r from-teal-500 to-cyan-500"></div>
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800">
+                <i data-lucide="code" class="w-3 h-3"></i> Кабинет 2 • Web Lab
+              </span>
+              <span class="text-xs font-mono font-bold text-amber-500 flex items-center gap-1">
+                ⭐ 4.98
+              </span>
+            </div>
+
+            <div class="flex items-center gap-4 mb-4">
+              <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-teal-600 to-cyan-600 text-white flex items-center justify-center text-xl font-bold font-mono shadow-md shadow-teal-600/20 shrink-0">
+                СУ
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-teal-500 border-2 border-white dark:border-slate-900"></span>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Сардор Умаров</h3>
+                <p class="text-xs font-bold text-teal-600 dark:text-teal-400 font-mono">Full-Stack (React & Node.js)</p>
+                <p class="text-[11px] text-slate-400 mt-0.5 font-mono">Ex-Fintech разработчик</p>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Обучает созданию интерактивных веб-приложений, SSR, REST API и базам данных. Выпускники трудоустраиваются в IT-компании.</p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-mono">
+              <span>🎓 280+ учеников</span>
+              <span class="text-teal-600 dark:text-teal-400">10 ThinkPad мест</span>
+            </div>
+
+            <button onclick="openVideoReel(2)" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-teal-600 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2 group/btn">
+              <div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center group-hover/btn:scale-110 transition-transform">
+                <i data-lucide="play" class="w-3 h-3 fill-current text-white"></i>
+              </div>
+              <span data-i18n="btnWatchReel">Смотреть видео-визитку (15 сек)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Teacher 3: UI/UX -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md hover:border-indigo-500/40 transition-all group relative overflow-hidden">
+          <div class="absolute top-0 right-0 left-0 h-1.5 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                <i data-lucide="palette" class="w-3 h-3"></i> Кабинет 3 • Design Studio
+              </span>
+              <span class="text-xs font-mono font-bold text-amber-500 flex items-center gap-1">
+                ⭐ 4.95
+              </span>
+            </div>
+
+            <div class="flex items-center gap-4 mb-4">
+              <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center text-xl font-bold font-mono shadow-md shadow-indigo-600/20 shrink-0">
+                МР
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-indigo-500 border-2 border-white dark:border-slate-900"></span>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Мадина Рахимова</h3>
+                <p class="text-xs font-bold text-indigo-600 dark:text-indigo-400 font-mono">Product & UI/UX Designer</p>
+                <p class="text-[11px] text-slate-400 mt-0.5 font-mono">Top Behance Creator</p>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Эксперт по дизайн-системам Figma, микроанимациям и мобильным прототипам. Каждый ученик собирает сильное портфолио.</p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-mono">
+              <span>🎓 220+ учеников</span>
+              <span class="text-indigo-600 dark:text-indigo-400">Графические дисплеи</span>
+            </div>
+
+            <button onclick="openVideoReel(3)" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-indigo-600 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2 group/btn">
+              <div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center group-hover/btn:scale-110 transition-transform">
+                <i data-lucide="play" class="w-3 h-3 fill-current text-white"></i>
+              </div>
+              <span data-i18n="btnWatchReel">Смотреть видео-визитку (15 сек)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Teacher 4: English IELTS -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md hover:border-blue-500/40 transition-all group relative overflow-hidden">
+          <div class="absolute top-0 right-0 left-0 h-1.5 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+                <i data-lucide="languages" class="w-3 h-3"></i> Кабинет 4 • IELTS Hub
+              </span>
+              <span class="text-xs font-mono font-bold text-amber-500 flex items-center gap-1">
+                ⭐ 5.0
+              </span>
+            </div>
+
+            <div class="flex items-center gap-4 mb-4">
+              <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center text-xl font-bold font-mono shadow-md shadow-blue-600/20 shrink-0">
+                ЗХ
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-blue-500 border-2 border-white dark:border-slate-900"></span>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Зухра Хасанова</h3>
+                <p class="text-xs font-bold text-blue-600 dark:text-blue-400 font-mono">Head IELTS Instructor</p>
+                <p class="text-[11px] text-slate-400 mt-0.5 font-mono">IELTS Official Band 8.5</p>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Специалист по академическому письму (Task 1 & 2) и свободной разговорной речи. 70+ учеников получили заветный Band 7.0–8.0.</p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-mono">
+              <span>🎓 400+ учеников</span>
+              <span class="text-blue-600 dark:text-blue-400">Audio Speaking Pods</span>
+            </div>
+
+            <button onclick="openVideoReel(4)" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2 group/btn">
+              <div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center group-hover/btn:scale-110 transition-transform">
+                <i data-lucide="play" class="w-3 h-3 fill-current text-white"></i>
+              </div>
+              <span data-i18n="btnWatchReel">Смотреть видео-визитку (15 сек)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Teacher 5: German Goethe -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md hover:border-amber-500/40 transition-all group relative overflow-hidden">
+          <div class="absolute top-0 right-0 left-0 h-1.5 bg-gradient-to-r from-amber-500 to-orange-500"></div>
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                <i data-lucide="book-open" class="w-3 h-3"></i> Кабинет 6 • Goethe Raum
+              </span>
+              <span class="text-xs font-mono font-bold text-amber-500 flex items-center gap-1">
+                ⭐ 4.92
+              </span>
+            </div>
+
+            <div class="flex items-center gap-4 mb-4">
+              <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-600 to-orange-600 text-white flex items-center justify-center text-xl font-bold font-mono shadow-md shadow-amber-600/20 shrink-0">
+                АМ
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-amber-500 border-2 border-white dark:border-slate-900"></span>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">Анвар Муродов</h3>
+                <p class="text-xs font-bold text-amber-600 dark:text-amber-400 font-mono">Goethe C1 Zertifikat Mentor</p>
+                <p class="text-[11px] text-slate-400 mt-0.5 font-mono">ТУ Мюнхен (TU Munich)</p>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Подготовка к сдаче экзаменов B1/B2/C1 для поступления в немецкие штудиенколлеги, вузы Германии и программы Ausbildung.</p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-mono">
+              <span>🎓 190+ учеников</span>
+              <span class="text-amber-600 dark:text-amber-400">Немецкие материалы</span>
+            </div>
+
+            <button onclick="openVideoReel(5)" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-amber-600 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2 group/btn">
+              <div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center group-hover/btn:scale-110 transition-transform">
+                <i data-lucide="play" class="w-3 h-3 fill-current text-white"></i>
+              </div>
+              <span data-i18n="btnWatchReel">Смотреть видео-визитку (15 сек)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Teacher 6: Korean TOPIK -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md hover:border-rose-500/40 transition-all group relative overflow-hidden">
+          <div class="absolute top-0 right-0 left-0 h-1.5 bg-gradient-to-r from-rose-500 to-pink-500"></div>
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800">
+                <i data-lucide="globe-2" class="w-3 h-3"></i> Кабинет 5 • TOPIK Hub
+              </span>
+              <span class="text-xs font-mono font-bold text-amber-500 flex items-center gap-1">
+                ⭐ 4.97
+              </span>
+            </div>
+
+            <div class="flex items-center gap-4 mb-4">
+              <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-rose-600 to-pink-600 text-white flex items-center justify-center text-xl font-bold font-mono shadow-md shadow-rose-600/20 shrink-0">
+                НТ
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-rose-500 border-2 border-white dark:border-slate-900"></span>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">Нигора Турсунова</h3>
+                <p class="text-xs font-bold text-rose-600 dark:text-rose-400 font-mono">TOPIK Level 6 Specialist</p>
+                <p class="text-[11px] text-slate-400 mt-0.5 font-mono">Yonsei University Alumni</p>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">4 года жизни и учебы в Сеуле. Углубленная отработка секций Чхутки, Ильги и Ссоги для получения грантов GKS и визы D-2.</p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-mono">
+              <span>🎓 240+ учеников</span>
+              <span class="text-rose-600 dark:text-rose-400">Yonsei методика</span>
+            </div>
+
+            <button onclick="openVideoReel(6)" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-rose-600 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2 group/btn">
+              <div class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center group-hover/btn:scale-110 transition-transform">
+                <i data-lucide="play" class="w-3 h-3 fill-current text-white"></i>
+              </div>
+              <span data-i18n="btnWatchReel">Смотреть видео-визитку (15 сек)</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 2D INTERACTIVE CAMPUS FLOOR MAP ==================== -->
+  <section id="campus-map" class="py-20 bg-white dark:bg-slate-950 relative overflow-hidden border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 text-xs font-bold mb-3 border border-emerald-300 dark:border-emerald-800">
+          <i data-lucide="map" class="w-3.5 h-3.5"></i>
+          <span data-i18n="mapBadge">Интерактивный кампус 2D</span>
+        </div>
+        <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white" data-i18n="mapTitle">Карта кабинетов Академии MAM</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2" data-i18n="mapDesc">Нажмите на любой кабинет на схеме, чтобы узнать закрепленного преподавателя, оснащение и расписание смен (четные / нечетные дни).</p>
+      </div>
+
+      <!-- Filter Category Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-8">
+        <button onclick="filterMapRooms('all')" id="mapFilter-all" class="px-4 py-2 rounded-xl text-xs font-bold transition-all bg-emerald-600 text-white shadow-sm" data-i18n="mapFilterAll">Все помещения</button>
+        <button onclick="filterMapRooms('it')" id="mapFilter-it" class="px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700" data-i18n="mapFilterIT">💻 IT-лаборатории (1, 2, 3)</button>
+        <button onclick="filterMapRooms('lang')" id="mapFilter-lang" class="px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700" data-i18n="mapFilterLang">🗣 Языковые классы (4, 5, 6)</button>
+        <button onclick="filterMapRooms('reception')" id="mapFilter-reception" class="px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700" data-i18n="mapFilterReception">☕ Ресепшен & Лаунж</button>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Floor Map Blueprint (Left Column - 7 cols) -->
+        <div class="lg:col-span-7 bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl relative overflow-hidden">
+          <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
+            <div class="flex items-center gap-2.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">Margilan Hub • Этаж 1 • MAM Campus</span>
+            </div>
+            <span class="text-[11px] font-mono text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800/80">Кликните по кабинету</span>
+          </div>
+
+          <!-- 2D Architecture Blueprint Grid -->
+          <div class="grid grid-cols-6 gap-3 min-h-[380px]">
+
+            <!-- Reception / Welcome Lounge (Full Top Strip) -->
+            <div onclick="selectRoom('reception')" id="roomBtn-reception" class="col-span-6 bg-slate-800/90 hover:bg-slate-800 border-2 border-slate-700 hover:border-emerald-500 rounded-2xl p-4 cursor-pointer transition-all duration-200 group relative">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center">
+                    <i data-lucide="coffee" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">Ресепшен & Welcome Lounge</h4>
+                    <p class="text-[11px] text-slate-400">Зона ожидания родителей, чай/кофе, запись на курсы</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-1 rounded bg-slate-900 text-slate-300 border border-slate-700">Главный вход 🚪</span>
+              </div>
+            </div>
+
+            <!-- Central Corridor (Hallway) -->
+            <div class="col-span-6 py-2 px-4 rounded-xl bg-slate-950/60 border border-dashed border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <span>◄ Центральный коридор кампуса MAM ►</span>
+              <span class="text-emerald-400/80 font-bold">Оптоволокно Wi-Fi 6 (1 Gbps)</span>
+            </div>
+
+            <!-- IT Wing: Room 1, 2, 3 (Top/Left side) -->
+            <!-- Room 1: Python -->
+            <div onclick="selectRoom('room1')" id="roomBtn-room1" class="col-span-3 sm:col-span-2 bg-slate-800/90 hover:bg-slate-800 border-2 border-slate-700 hover:border-emerald-500 rounded-2xl p-4 cursor-pointer transition-all duration-200 group relative">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">№ 1</span>
+                <i data-lucide="terminal" class="w-4 h-4 text-emerald-400"></i>
+              </div>
+              <h5 class="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">Python Lab</h5>
+              <p class="text-[11px] text-slate-400 mt-1">И. Каримов</p>
+              <div class="mt-3 pt-2 border-t border-slate-700/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>💻 10 ThinkPad</span>
+                <span class="text-emerald-400">Чёт/Нечёт</span>
+              </div>
+            </div>
+
+            <!-- Room 2: Web Dev -->
+            <div onclick="selectRoom('room2')" id="roomBtn-room2" class="col-span-3 sm:col-span-2 bg-slate-800/90 hover:bg-slate-800 border-2 border-slate-700 hover:border-teal-500 rounded-2xl p-4 cursor-pointer transition-all duration-200 group relative">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30">№ 2</span>
+                <i data-lucide="code" class="w-4 h-4 text-teal-400"></i>
+              </div>
+              <h5 class="text-sm font-bold text-white group-hover:text-teal-400 transition-colors">Web Dev Lab</h5>
+              <p class="text-[11px] text-slate-400 mt-1">С. Умаров</p>
+              <div class="mt-3 pt-2 border-t border-slate-700/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>💻 10 ThinkPad</span>
+                <span class="text-teal-400">Чёт/Нечёт</span>
+              </div>
+            </div>
+
+            <!-- Room 3: UI/UX Design -->
+            <div onclick="selectRoom('room3')" id="roomBtn-room3" class="col-span-6 sm:col-span-2 bg-slate-800/90 hover:bg-slate-800 border-2 border-slate-700 hover:border-indigo-500 rounded-2xl p-4 cursor-pointer transition-all duration-200 group relative">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">№ 3</span>
+                <i data-lucide="palette" class="w-4 h-4 text-indigo-400"></i>
+              </div>
+              <h5 class="text-sm font-bold text-white group-hover:text-indigo-400 transition-colors">Figma Studio</h5>
+              <p class="text-[11px] text-slate-400 mt-1">М. Рахимова</p>
+              <div class="mt-3 pt-2 border-t border-slate-700/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>🎨 4K Дисплеи</span>
+                <span class="text-indigo-400">Чёт/Нечёт</span>
+              </div>
+            </div>
+
+            <!-- Language Wing: Room 4, 5, 6 (Bottom side) -->
+            <!-- Room 4: English IELTS -->
+            <div onclick="selectRoom('room4')" id="roomBtn-room4" class="col-span-3 sm:col-span-2 bg-slate-800/90 hover:bg-slate-800 border-2 border-slate-700 hover:border-blue-500 rounded-2xl p-4 cursor-pointer transition-all duration-200 group relative">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">№ 4</span>
+                <i data-lucide="languages" class="w-4 h-4 text-blue-400"></i>
+              </div>
+              <h5 class="text-sm font-bold text-white group-hover:text-blue-400 transition-colors">IELTS Speaking</h5>
+              <p class="text-[11px] text-slate-400 mt-1">З. Хасанова</p>
+              <div class="mt-3 pt-2 border-t border-slate-700/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>🎙 Audio Pods</span>
+                <span class="text-blue-400">Чёт/Нечёт</span>
+              </div>
+            </div>
+
+            <!-- Room 5: Korean TOPIK -->
+            <div onclick="selectRoom('room5')" id="roomBtn-room5" class="col-span-3 sm:col-span-2 bg-slate-800/90 hover:bg-slate-800 border-2 border-slate-700 hover:border-rose-500 rounded-2xl p-4 cursor-pointer transition-all duration-200 group relative">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">№ 5</span>
+                <i data-lucide="globe-2" class="w-4 h-4 text-rose-400"></i>
+              </div>
+              <h5 class="text-sm font-bold text-white group-hover:text-rose-400 transition-colors">Korean Hub</h5>
+              <p class="text-[11px] text-slate-400 mt-1">Н. Турсунова</p>
+              <div class="mt-3 pt-2 border-t border-slate-700/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>🇰🇷 Yonsei Lab</span>
+                <span class="text-rose-400">Чёт/Нечёт</span>
+              </div>
+            </div>
+
+            <!-- Room 6: German Goethe -->
+            <div onclick="selectRoom('room6')" id="roomBtn-room6" class="col-span-6 sm:col-span-2 bg-slate-800/90 hover:bg-slate-800 border-2 border-slate-700 hover:border-amber-500 rounded-2xl p-4 cursor-pointer transition-all duration-200 group relative">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">№ 6</span>
+                <i data-lucide="book-open" class="w-4 h-4 text-amber-400"></i>
+              </div>
+              <h5 class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors">Goethe Raum</h5>
+              <p class="text-[11px] text-slate-400 mt-1">А. Муродов</p>
+              <div class="mt-3 pt-2 border-t border-slate-700/60 flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>🇩🇪 B1/B2/C1</span>
+                <span class="text-amber-400">Чёт/Нечёт</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Legend Footer -->
+          <div class="mt-6 pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between text-xs text-slate-400">
+            <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-emerald-500"></span> IT Классы</span>
+            <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-blue-500"></span> Языковые Аудитории</span>
+            <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-amber-500"></span> Ресепшен</span>
+            <span class="text-slate-500 font-mono">Кондиционирование Clivet</span>
+          </div>
+        </div>
+
+        <!-- Room Inspector Card (Right Column - 5 cols) -->
+        <div id="roomInspectorCard" class="lg:col-span-5 bg-slate-50 dark:bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-md">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQ SECTION ==================== -->
+  <section id="faq" class="py-20 bg-white dark:bg-slate-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2" data-i18n="faqSubhead">Вопросы и ответы</h2>
+        <p class="text-3xl font-extrabold text-slate-900 dark:text-white" data-i18n="faqTitle">Частые вопросы родителей и учеников</p>
+      </div>
+
+      <div class="space-y-3">
+
+        <!-- FAQ Item 1 -->
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-white dark:bg-slate-900">
+          <button onclick="toggleFaq(1)" class="w-full px-6 py-4 text-left font-bold text-sm sm:text-base text-slate-900 dark:text-white flex items-center justify-between gap-4">
+            <span data-i18n="faqQ1">Нужно ли приносить собственный ноутбук на занятия?</span>
+            <i id="faqIcon-1" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faqAns-1" class="hidden px-6 pb-5 text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800 pt-3">
+            <span data-i18n="faqA1">Нет, приносить свой ноутбук не требуется. Каждому ученику академия MAM предоставляет персональный настроенный ноутбук Lenovo ThinkPad на всё время урока с предустановленным софтом и чистой средой разработки.</span>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-white dark:bg-slate-900">
+          <button onclick="toggleFaq(2)" class="w-full px-6 py-4 text-left font-bold text-sm sm:text-base text-slate-900 dark:text-white flex items-center justify-between gap-4">
+            <span data-i18n="faqQ2">Выдаётся ли сертификат после окончания курса?</span>
+            <i id="faqIcon-2" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faqAns-2" class="hidden px-6 pb-5 text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800 pt-3">
+            <span data-i18n="faqA2">Да! При успешной защите дипломного проекта ученик получает официальный номерной сертификат Maryam Academy Mission с подписью директора Богданова Т.Я. Подлинность диплома проверяется онлайн через реестр на нашем сайте.</span>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-white dark:bg-slate-900">
+          <button onclick="toggleFaq(3)" class="w-full px-6 py-4 text-left font-bold text-sm sm:text-base text-slate-900 dark:text-white flex items-center justify-between gap-4">
+            <span data-i18n="faqQ3">Какие способы оплаты принимаются (Click, Payme, Наличные)?</span>
+            <i id="faqIcon-3" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faqAns-3" class="hidden px-6 pb-5 text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800 pt-3">
+            <span data-i18n="faqA3">Мы принимаем оплату через мобильные приложения Click, Payme, Uzum Bank, а также наличными в кассе академии в Маргилане. Возможна поэтапная помесячная оплата без процентов.</span>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-white dark:bg-slate-900">
+          <button onclick="toggleFaq(4)" class="w-full px-6 py-4 text-left font-bold text-sm sm:text-base text-slate-900 dark:text-white flex items-center justify-between gap-4">
+            <span data-i18n="faqQ4">Что происходит, если ученик пропустил занятие по болезни?</span>
+            <i id="faqIcon-4" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faqAns-4" class="hidden px-6 pb-5 text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800 pt-3">
+            <span data-i18n="faqA4">Все уроки записываются или отрабатываются индивидуально с дежурным наставником. Пропущенные оплаченные часы не сгорают при наличии уважительной причины.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CONTACTS & LOCATION ==================== -->
+  <section id="contacts" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2 block" data-i18n="contactsSubhead">Локация и связь</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6" data-i18n="contactsTitle">Ждём вас в академии MAM</h2>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mb-8 leading-relaxed" data-i18n="contactsDesc">
+            Приходите на чашку кофе, познакомьтесь с преподавателями и оцените оснащение учебных классов в самом центре Маргилана.
+          </p>
+
+          <div class="space-y-4">
+            
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <div class="p-2.5 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="contactAddressTitle">Адрес академии</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="contactAddressText">г. Маргилан, ул. Бурхониддин Маргилоний, 42 (ориентир: Центральный сквер)</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <div class="p-2.5 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 shrink-0">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="contactPhoneTitle">Телефон приёмной</h4>
+                <a href="tel:+998901234567" class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 mt-0.5 block hover:underline">+998 (90) 123-45-67</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <div class="p-2.5 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 shrink-0">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="contactHoursTitle">Время работы</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="contactHoursText">Понедельник — Суббота: 08:30 – 20:30 (Воскресенье — день проектов)</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mt-8 flex items-center gap-3">
+            <a href="https://t.me/maryam_academy" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-semibold text-sm transition-all shadow-md shadow-sky-500/20">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Telegram-канал MAM</span>
+            </a>
+            <button onclick="openBookingModal()" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all">
+              <span data-i18n="btnBookTrial">Записаться на Sinov Darsi</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Visual Campus Card -->
+        <div class="relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 p-8 flex flex-col justify-between min-h-[380px] shadow-xl text-white">
+          <div class="absolute inset-0 bg-gradient-to-tr from-emerald-950/80 via-slate-900/90 to-indigo-950/80 z-0"></div>
+          
+          <div class="relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-mono mb-4 border border-emerald-500/30">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Margilan Hub Campus
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Maryam Academy Mission</h3>
+            <p class="text-xs text-slate-300 max-w-sm">Современное пространство с оптоволоконным интернетом, коворкингом и индивидуальными рабочими станциями.</p>
+          </div>
+
+          <div class="relative z-10 grid grid-cols-2 gap-3 pt-6 border-t border-slate-800">
+            <div class="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+              <div class="text-xs text-slate-400">Вместимость</div>
+              <div class="text-base font-bold font-mono text-emerald-400">4 учебных класса</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+              <div class="text-xs text-slate-400">Парковка</div>
+              <div class="text-base font-bold font-mono text-emerald-400">Бесплатно</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-12 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100 dark:border-slate-800">
+        
+        <!-- Logo & Title in Footer -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-tr from-emerald-600 via-teal-500 to-indigo-600 shadow-sm">
+            <svg class="w-6 h-6 text-white" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 7L4 15L20 23L36 15L20 7Z" fill="white" fill-opacity="0.95"/>
+              <path d="M12 21V28C12 31.5 15.5 34 20 34C24.5 34 28 31.5 28 28V21L20 25.5L12 21Z" fill="white" fill-opacity="0.75"/>
+              <circle cx="36" cy="15" r="2.5" fill="#34d399"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-base font-bold text-slate-900 dark:text-white">Maryam Academy Mission</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">IT & Languages Academy • Margilan</div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 dark:text-slate-400 font-medium">
+          <a href="#courses" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" data-i18n="navCourses">Курсы</a>
+          <a href="#teachers" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" data-i18n="navTeachers">Преподаватели</a>
+          <a href="#balance" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" data-i18n="navBalance">Проверка баланса</a>
+          <a href="#certificate" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" data-i18n="navCertificate">Проверка сертификата</a>
+          <a href="#faq" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" data-i18n="navFaq">FAQ</a>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>© 2026 Maryam Academy Mission (MAM). Все права защищены. Директор: Богданов Т.Я.</p>
+        <p class="font-mono">Margilan • Uzbekistan</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== MOBILE FLOATING ACTION BAR ==================== -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-3 py-2.5 shadow-2xl transition-colors">
+    <div class="max-w-md mx-auto flex items-center gap-2">
+      <!-- Call button -->
+      <a href="tel:+998901234567" class="flex-shrink-0 flex items-center justify-center w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 active:scale-95 transition-transform" aria-label="Позвонить в приёмную">
+        <i data-lucide="phone-call" class="w-5 h-5 text-emerald-600 dark:text-emerald-400"></i>
+      </a>
+      <!-- Telegram channel button -->
+      <a href="https://t.me/maryam_academy" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 flex items-center justify-center w-11 h-11 rounded-xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 hover:bg-sky-100 dark:hover:bg-sky-900 border border-sky-200 dark:border-sky-800 active:scale-95 transition-transform" aria-label="Telegram канал">
+        <i data-lucide="send" class="w-5 h-5"></i>
+      </a>
+      <!-- Book Trial button -->
+      <button onclick="openBookingModal()" class="flex-1 flex items-center justify-center gap-2 h-11 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-600/25 active:scale-[0.98] transition-all">
+        <i data-lucide="sparkles" class="w-4 h-4 text-emerald-200"></i>
+        <span data-i18n="mobileBarBtn">Записаться на Sinov Darsi</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== BOOKING MODAL ==================== -->
+  <div id="bookingModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="relative w-full max-w-lg bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl transition-all">
+      
+      <!-- Close button -->
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="mb-6">
+        <span class="inline-block px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 text-xs font-bold mb-2">Sinov Darsi • 0 UZS</span>
+        <h3 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="modalTitle">Запись на пробный урок</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1" data-i18n="modalSubtitle">Заполните данные для закрепления места и оборудования за учеником.</p>
+      </div>
+
+      <!-- Form inside modal -->
+      <form onsubmit="handleModalBooking(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="formNameLabel">ФИО Ученика</label>
+          <input type="text" id="modalStudentName" required placeholder="Например: Азизбек Каримов" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="formCourseLabel">Выбор курса</label>
+          <select id="modalCourseSelect" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+            <option value="Python-программирование">Python-программирование</option>
+            <option value="Веб-разработка (Frontend/Backend)">Веб-разработка (Frontend/Backend)</option>
+            <option value="UI/UX Дизайн">UI/UX Дизайн & Figma</option>
+            <option value="Английский язык (IELTS)">Английский язык (IELTS)</option>
+            <option value="Немецкий язык (Goethe)">Немецкий язык (Goethe)</option>
+            <option value="Корейский язык (TOPIK)">Корейский язык (TOPIK)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="formPhoneLabel">Номер телефона</label>
+          <input type="tel" id="modalStudentPhone" required value="+998 " placeholder="+998 (90) 123-45-67" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-mono text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        </div>
+
+        <button type="submit" class="w-full mt-2 py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/25 transition-all flex items-center justify-center gap-2">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          <span data-i18n="btnConfirmBooking">Подтвердить и открыть Telegram</span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ==================== TEACHER VIDEO REEL MODAL (9:16 FORMAT) ==================== -->
+  <div id="videoReelModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-4">
+    <div class="relative w-full max-w-[380px] h-[680px] max-h-[92vh] bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl flex flex-col justify-between select-none">
+      
+      <!-- Top Story/Reels Progress Bars (15s total) -->
+      <div class="absolute top-3 left-3 right-3 z-30 flex items-center gap-1.5">
+        <div class="h-1 flex-1 bg-white/30 rounded-full overflow-hidden">
+          <div id="reelProgressBar" class="h-full bg-emerald-400 w-0 transition-all duration-100 ease-linear"></div>
+        </div>
+      </div>
+
+      <!-- Top Bar: Teacher Mini Profile + Close -->
+      <div class="relative z-30 pt-6 px-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div id="reelAvatar" class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold font-mono text-sm border-2 border-emerald-400">
+            ИК
+          </div>
+          <div>
+            <div class="flex items-center gap-1">
+              <span id="reelTeacherName" class="text-sm font-bold text-white leading-tight">Исломбек Каримов</span>
+              <i data-lucide="badge-check" class="w-4 h-4 text-emerald-400 fill-emerald-400/20"></i>
+            </div>
+            <p id="reelTeacherRole" class="text-[11px] text-emerald-300 font-mono">Senior Python Mentor</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="toggleReelAudio()" id="reelSoundBtn" class="p-2 rounded-full bg-black/50 text-white hover:bg-black/70 border border-white/10 transition-colors" title="Mute/Unmute">
+            <i id="reelSoundIcon" data-lucide="volume-2" class="w-4 h-4"></i>
+          </button>
+          <button onclick="closeVideoReel()" class="p-2 rounded-full bg-black/50 text-white hover:bg-black/70 border border-white/10 transition-colors" title="Закрыть">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Center Video Canvas Simulation -->
+      <div class="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none">
+        <canvas id="reelCanvas" width="380" height="680" class="w-full h-full object-cover"></canvas>
+      </div>
+
+      <!-- Video Vignette & Gradients -->
+      <div class="absolute inset-0 z-15 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/70 pointer-events-none"></div>
+
+      <!-- Floating Right-Side Action Icons (TikTok/Reels style) -->
+      <div class="relative z-30 self-end mr-3 mb-24 flex flex-col items-center gap-4 text-white">
+        <!-- Like -->
+        <button onclick="toggleReelLike()" class="flex flex-col items-center gap-1 group">
+          <div id="reelLikeBtn" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center transition-all group-hover:scale-110">
+            <i id="reelLikeIcon" data-lucide="heart" class="w-5 h-5 text-white transition-colors"></i>
+          </div>
+          <span id="reelLikeCount" class="text-[10px] font-bold font-mono">1.4k</span>
+        </button>
+
+        <!-- Play/Pause -->
+        <button onclick="toggleReelPlayPause()" class="flex flex-col items-center gap-1 group">
+          <div class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center transition-all group-hover:scale-110">
+            <i id="reelPlayPauseIcon" data-lucide="pause" class="w-5 h-5 text-white"></i>
+          </div>
+          <span id="reelPlayStatus" class="text-[10px] font-mono">15s</span>
+        </button>
+
+        <!-- Direct Telegram Share -->
+        <button onclick="shareReel()" class="flex flex-col items-center gap-1 group">
+          <div class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center transition-all group-hover:scale-110">
+            <i data-lucide="send" class="w-5 h-5 text-white"></i>
+          </div>
+          <span class="text-[10px] font-mono">Share</span>
+        </button>
+      </div>
+
+      <!-- Bottom Overlay: Subtitles, Pitch & Action Button -->
+      <div class="relative z-30 p-4 bg-gradient-to-t from-black via-black/80 to-transparent">
+        
+        <!-- Live Speech Subtitles -->
+        <div class="mb-3 px-3 py-2 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 text-xs text-white leading-snug">
+          <div class="flex items-center gap-1.5 text-[10px] text-emerald-400 font-bold uppercase tracking-wider mb-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>Видео-визитка • Речь преподавателя</span>
+          </div>
+          <p id="reelSubtitles" class="font-medium">"Ассалому алайкум! Мен Maryam Academy'да Python курси устозиман..."</p>
+        </div>
+
+        <!-- Book Teacher CTA -->
+        <button onclick="bookFromReel()" class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 active:bg-emerald-600 text-slate-950 font-extrabold text-sm shadow-lg shadow-emerald-500/25 transition-all flex items-center justify-center gap-2">
+          <i data-lucide="calendar-check" class="w-4 h-4"></i>
+          <span id="reelCtaText">Записаться к преподавателю</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // --- 1. INTERNATIONALIZATION DICTIONARY (RU / UZ) ---
+    const i18nData = {
+      ru: {
+        logoSubtitle: "Mission of IT & Languages",
+        navCourses: "Курсы",
+        navTeachers: "Преподаватели",
+        navMap: "Карта кабинетов",
+        navBalance: "Проверка баланса",
+        navCertificate: "Проверка сертификата",
+        navFaq: "FAQ",
+        navContacts: "Контакты",
+        btnBookTrial: "Записаться на пробный урок",
+        heroBadge: "Набор открыт: Сезон 2025–2026 • Маргилан",
+        heroTitlePart1: "Освой IT и Иностранные Языки в",
+        heroSubtitle: "Практико-ориентированное обучение для будущих инженеров, разработчиков и полиглотов. Персональные ноутбуки ThinkPad, мини-группы до 6 человек и международные стандарты.",
+        heroBtnTrial: "Записаться на Sinov Darsi",
+        heroBtnCourses: "Смотреть курсы",
+        metric1: "Выпускников академии",
+        metric2: "Учеников в группе",
+        metric3: "Оборудование 1:1",
+        metric4: "IELTS & TOPIK топ",
+        coursesSubhead: "Направления обучения",
+        coursesTitle: "Программы курсов Maryam Academy",
+        coursesDesc: "Два ключевых крыла академии: передовые IT-профессии и международные языковые квалификации.",
+        filterAll: "Все курсы",
+        filterIt: "IT-Направление",
+        filterLang: "Языковое Направление",
+        btnSelectCourse: "Записаться на курс",
+        teachersBadge: "Reels / Shorts Формат 9:16",
+        teachersTitle: "Наши преподаватели и видео-визитки",
+        teachersDesc: "Познакомьтесь с ментором за 15 секунд: посмотрите живое видео-приветствие перед записью на пробный урок.",
+        btnWatchReel: "Смотреть видео-визитку (15 сек)",
+        mapBadge: "Интерактивный кампус 2D",
+        mapTitle: "Карта кабинетов Академии MAM",
+        mapDesc: "Нажмите на любой кабинет на схеме, чтобы узнать закрепленного преподавателя, оснащение и расписание смен (четные / нечетные дни).",
+        mapFilterAll: "Все помещения",
+        mapFilterIT: "💻 IT-лаборатории (1, 2, 3)",
+        mapFilterLang: "🗣 Языковые классы (4, 5, 6)",
+        mapFilterReception: "☕ Ресепшен & Лаунж",
+        trialBadge: "Бесплатный Sinov Darsi",
+        trialTitle: "Запишитесь на первое пробное занятие",
+        trialSubtitle: "Ученик познакомится с преподавателем, протестирует индивидуальный ноутбук и решит свои первые практические задачи. Без скрытых платежей.",
+        formNameLabel: "ФИО Ученика",
+        formCourseLabel: "Выбор курса",
+        formPhoneLabel: "Номер телефона",
+        trialFormGuarantee: "Заявка сразу направляется администратору в Telegram",
+        btnSubmitBooking: "Записаться через Telegram",
+        balanceTitle: "Экспресс-проверка баланса ученика",
+        balanceSubtitle: "Введите номер телефона, привязанный к обучению в MAM, чтобы узнать статус абонемента и оставшиеся уроки.",
+        btnCheckBalance: "Проверить",
+        balanceHint: "Демо-номера для теста:",
+        certTitle: "Онлайн-проверка подлинности сертификата",
+        certSubtitle: "Каждый диплом MAM имеет уникальный реестровый номер и подтверждается подписью Директора Богданова Т.Я.",
+        btnCheckCert: "Проверить диплом",
+        certHint: "Примеры реестра:",
+        teachersSubhead: "Команда наставников",
+        faqSubhead: "Вопросы и ответы",
+        faqTitle: "Частые вопросы родителей и учеников",
+        faqQ1: "Нужно ли приносить собственный ноутбук на занятия?",
+        faqA1: "Нет, приносить свой ноутбук не требуется. Каждому ученику академия MAM предоставляет персональный настроенный ноутбук Lenovo ThinkPad на всё время урока с предустановленным софтом и чистой средой разработки.",
+        faqQ2: "Выдаётся ли сертификат после окончания курса?",
+        faqA2: "Да! При успешной защите дипломного проекта ученик получает официальный номерной сертификат Maryam Academy Mission с подписью директора Богданова Т.Я. Подлинность диплома проверяется онлайн через реестр на нашем сайте.",
+        faqQ3: "Какие способы оплаты принимаются (Click, Payme, Наличные)?",
+        faqA3: "Мы принимаем оплату через мобильные приложения Click, Payme, Uzum Bank, а также наличными в кассе академии в Маргилане. Возможна поэтапная помесячная оплата без процентов.",
+        faqQ4: "Что происходит, если ученик пропустил занятие по болезни?",
+        faqA4: "Все уроки записываются или отрабатываются индивидуально с дежурным наставником. Пропущенные оплаченные часы не сгорают при наличии уважительной причины.",
+        contactsSubhead: "Локация и связь",
+        contactsTitle: "Ждём вас в академии MAM",
+        contactsDesc: "Приходите на чашку кофе, познакомьтесь с преподавателями и оцените оснащение учебных классов в самом центре Маргилана.",
+        contactAddressTitle: "Адрес академии",
+        contactAddressText: "г. Маргилан, ул. Бурхониддин Маргилоний, 42 (ориентир: Центральный сквер)",
+        contactPhoneTitle: "Телефон приёмной",
+        contactHoursTitle: "Время работы",
+        contactHoursText: "Понедельник — Суббота: 08:30 – 20:30 (Воскресенье — день проектов)",
+        modalTitle: "Запись на пробный урок",
+        modalSubtitle: "Заполните данные для закрепления места и оборудования за учеником.",
+        btnConfirmBooking: "Подтвердить и открыть Telegram",
+        mobileBarBtn: "Записаться на Sinov Darsi"
+      },
+      uz: {
+        logoSubtitle: "IT va Xorijiy Tillar Missiyasi",
+        navCourses: "Kurslar",
+        navTeachers: "O'qituvchilar",
+        navMap: "Xonalar xaritasi",
+        navBalance: "Balansni tekshirish",
+        navCertificate: "Sertifikatni tekshirish",
+        navFaq: "FAQ",
+        navContacts: "Aloqa",
+        btnBookTrial: "Sinov darsiga yozilish",
+        heroBadge: "Qabul ochiq: 2025–2026 Mavsum • Marg'ilon",
+        heroTitlePart1: "MAM Akademiyasida IT va Xorijiy Tillarni",
+        heroSubtitle: "Bo'lajak muhandislar, dasturchilar va poliglotlar uchun amaliy ta'lim. Shaxsiy ThinkPad noutbuklari, 6 kishilik mini-guruhlar va xalqaro standartlar.",
+        heroBtnTrial: "Sinov Darsiga yozilish",
+        heroBtnCourses: "Kurslarni ko'rish",
+        metric1: "Akademiya bitiruvchilari",
+        metric2: "Guruhdagi o'quvchilar soni",
+        metric3: "1:1 Shaxsiy noutbuk",
+        metric4: "IELTS & TOPIK natijalari",
+        coursesSubhead: "O'quv yo'nalishlari",
+        coursesTitle: "Maryam Academy kurs dasturlari",
+        coursesDesc: "Akademiyaning ikkita asosiy qanoti: ilg'or IT-kasblar va xalqaro til malakalari.",
+        filterAll: "Barcha kurslar",
+        filterIt: "IT Yo'nalishi",
+        filterLang: "Til Yo'nalishi",
+        btnSelectCourse: "Kursga yozilish",
+        teachersBadge: "Reels / Shorts 9:16 Format",
+        teachersTitle: "Bizning ustozlarimiz va video-vizitkalar",
+        teachersDesc: "15 soniyada ustoz bilan tanishing: sinov darsiga yozilishdan oldin jonli video-murojaatni tomosha qiling.",
+        btnWatchReel: "Video-vizitkani ko'rish (15 soniya)",
+        mapBadge: "Interaktiv 2D Kampus",
+        mapTitle: "MAM Akademiyasi xonalari xaritasi",
+        mapDesc: "O'qituvchi, ThinkPad jihozlari va smenalar jadvalini (juft/toq kunlar) bilish uchun xaritadagi xonani bosing.",
+        mapFilterAll: "Barcha xonalar",
+        mapFilterIT: "💻 IT-laboratoriyalari (1, 2, 3)",
+        mapFilterLang: "🗣 Til xonalari (4, 5, 6)",
+        mapFilterReception: "☕ Resepshn & Kutish zali",
+        trialBadge: "Bepul Sinov Darsi",
+        trialTitle: "Birinchi sinov darsiga yoziling",
+        trialSubtitle: "O'quvchi ustoz bilan tanishadi, shaxsiy noutbukda birinchi amaliy vazifalarini bajarib ko'radi. Yashirin to'lovlarsiz.",
+        formNameLabel: "O'quvchining F.I.Sh.",
+        formCourseLabel: "Kursni tanlang",
+        formPhoneLabel: "Telefon raqami",
+        trialFormGuarantee: "Ariza darhol Telegram orqali administratorga yuboriladi",
+        btnSubmitBooking: "Telegram orqali yozilish",
+        balanceTitle: "O'quvchi balansini tezkor tekshirish",
+        balanceSubtitle: "Abonement holati va qolgan darslar sonini bilish uchun MAMda ro'yxatdan o'tgan telefon raqamini kiriting.",
+        btnCheckBalance: "Tekshirish",
+        balanceHint: "Sinash uchun demo-raqamlar:",
+        certTitle: "Sertifikat haqiqiyligini onlayn tekshirish",
+        certSubtitle: "Har bir MAM diplomi unikal reyestr raqamiga ega va Direktor Bogdanov T.Y. imzosi bilan tasdiqlangan.",
+        btnCheckCert: "Diplomni tekshirish",
+        certHint: "Reyestr namunalari:",
+        teachersSubhead: "Ustozlar jamoasi",
+        faqSubhead: "Savol-javoblar",
+        faqTitle: "Ota-onalar va o'quvchilarning tez-tez so'raladigan savollari",
+        faqQ1: "Darsga o'z noutbukimni olib kelishim kerakmi?",
+        faqA1: "Yo'q, shaxsiy noutbuk olib kelish shart emas. Har bir o'quvchiga dars davomida maxsus dasturlar o'rnatilgan Lenovo ThinkPad noutbuki taqdim etiladi.",
+        faqQ2: "Kurs tugagach sertifikat beriladimi?",
+        faqA2: "Ha! Bitiruv loyihasini muvaffaqiyatli himoya qilgan o'quvchilarga Maryam Academy Mission rasmiy sertifikati topshiriladi. Uning haqiqiyligini saytimizda tekshirish mumkin.",
+        faqQ3: "Qanday to'lov turlari qabul qilinadi (Click, Payme, Naqd)?",
+        faqA3: "Biz Click, Payme, Uzum ilovalari orqali hamda Marg'ilondagi filialimizda naqd pul shaklida to'lovlarni qabul qilamiz. Foizsiz bo'lib to'lash imkoni mavjud.",
+        faqQ4: "O'quvchi kasallik sababli dars qoldirsa nima bo'ladi?",
+        faqA4: "Barcha darslar navbatchi mentor bilan yakka tartibda qayta o'zlashtiriladi. Sababli qoldirilgan darslar kuyib ketmaydi.",
+        contactsSubhead: "Manzil va aloqa",
+        contactsTitle: "Sizni MAM akademiyasida kutamiz",
+        contactsDesc: "Kelib kofe iching, ustozlar bilan suhbatlashing va Marg'ilon markazidagi zamonaviy sinfxonalarimiz bilan tanishing.",
+        contactAddressTitle: "Akademiya manzili",
+        contactAddressText: "Marg'ilon sh., Burhoniddin Marg'inoniy ko'chasi, 42 (Mo'ljal: Markaziy xiyobon)",
+        contactPhoneTitle: "Qabulxona telefoni",
+        contactHoursTitle: "Ish vaqti",
+        contactHoursText: "Dushanba — Shanba: 08:30 – 20:30 (Yakshanba — loyihalar kuni)",
+        modalTitle: "Sinov darsiga yozilish",
+        modalSubtitle: "O'quvchiga joy va jihoz biriktirish uchun ma'lumotlarni to'ldiring.",
+        btnConfirmBooking: "Tasdiqlash va Telegramni ochish",
+        mobileBarBtn: "Sinov Darsiga yozilish"
+      }
+    };
+
+    let currentLang = localStorage.getItem('mam_lang') || 'ru';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('mam_lang', lang);
+
+      // Update button visual states
+      const ruBtn = document.getElementById('langRuBtn');
+      const uzBtn = document.getElementById('langUzBtn');
+      if (lang === 'ru') {
+        ruBtn.className = "px-2.5 py-1.5 rounded-md transition-all bg-white dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 shadow-sm";
+        uzBtn.className = "px-2.5 py-1.5 rounded-md transition-all text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200";
+      } else {
+        uzBtn.className = "px-2.5 py-1.5 rounded-md transition-all bg-white dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 shadow-sm";
+        ruBtn.className = "px-2.5 py-1.5 rounded-md transition-all text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200";
+      }
+
+      // Update all elements with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18nData[lang] && i18nData[lang][key]) {
+          el.textContent = i18nData[lang][key];
+        }
+      });
+
+      if (typeof selectRoom === 'function' && typeof selectedRoomId !== 'undefined' && selectedRoomId) {
+        selectRoom(selectedRoomId);
+      }
+    }
+
+    // --- 2. DARK / LIGHT THEME TOGGLE ---
+    function initTheme() {
+      const savedTheme = localStorage.getItem('mam_theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        updateThemeIcon(true);
+      } else {
+        document.documentElement.classList.remove('dark');
+        updateThemeIcon(false);
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('mam_theme', isDark ? 'dark' : 'light');
+      updateThemeIcon(isDark);
+    }
+
+    function updateThemeIcon(isDark) {
+      const icon = document.getElementById('themeIcon');
+      if (icon) {
+        icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+        lucide.createIcons();
+      }
+    }
+
+    // --- 3. MOBILE MENU TOGGLE ---
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // --- 4. COURSE FILTER TABS ---
+    function filterCourses(category) {
+      const itCourses = document.querySelectorAll('.it-course');
+      const langCourses = document.querySelectorAll('.lang-course');
+
+      const tabAll = document.getElementById('tabAll');
+      const tabIt = document.getElementById('tabIt');
+      const tabLang = document.getElementById('tabLang');
+
+      // reset tab classes
+      [tabAll, tabIt, tabLang].forEach(tab => {
+        tab.className = "px-5 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-emerald-600 transition-all";
+      });
+
+      if (category === 'all') {
+        tabAll.className = "px-5 py-2 rounded-lg bg-emerald-600 text-white transition-all";
+        itCourses.forEach(c => c.classList.remove('hidden'));
+        langCourses.forEach(c => c.classList.remove('hidden'));
+      } else if (category === 'it') {
+        tabIt.className = "px-5 py-2 rounded-lg bg-emerald-600 text-white transition-all";
+        itCourses.forEach(c => c.classList.remove('hidden'));
+        langCourses.forEach(c => c.classList.add('hidden'));
+      } else if (category === 'lang') {
+        tabLang.className = "px-5 py-2 rounded-lg bg-indigo-600 text-white transition-all";
+        itCourses.forEach(c => c.classList.add('hidden'));
+        langCourses.forEach(c => c.classList.remove('hidden'));
+      }
+    }
+
+    // --- 5. FAQ ACCORDION ---
+    function toggleFaq(id) {
+      const ans = document.getElementById('faqAns-' + id);
+      const icon = document.getElementById('faqIcon-' + id);
+      const isHidden = ans.classList.contains('hidden');
+
+      // Close all others
+      for (let i = 1; i <= 4; i++) {
+        const a = document.getElementById('faqAns-' + i);
+        const ic = document.getElementById('faqIcon-' + i);
+        if (a) a.classList.add('hidden');
+        if (ic) ic.style.transform = 'rotate(0deg)';
+      }
+
+      if (isHidden) {
+        ans.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // --- 6. BOOKING MODAL LOGIC ---
+    function openBookingModal(courseName) {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.remove('hidden');
+      if (courseName) {
+        const select = document.getElementById('modalCourseSelect');
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value.includes(courseName) || courseName.includes(select.options[i].value)) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+
+    // Close modal on click outside
+    window.addEventListener('click', function(e) {
+      const modal = document.getElementById('bookingModal');
+      if (e.target === modal) {
+        closeBookingModal();
+      }
+    });
+
+    // --- 7. TELEGRAM SENDING DISPATCHER ---
+    function dispatchTelegramBooking(name, course, phone) {
+      const message = encodeURIComponent(
+        `🎓 ЗАЯВКА НА SINOV DARSI (MAM Academy)\n\n` +
+        `👤 Ученик: ${name}\n` +
+        `📚 Курс: ${course}\n` +
+        `📞 Телефон: ${phone}\n` +
+        `📍 Локация: Маргилан, филиал MAM\n` +
+        `🗓 Дата подачи: ${new Date().toLocaleDateString('ru-RU')}`
+      );
+      // Direct telegram link to Maryam Academy admin
+      const tgUrl = `https://t.me/maryam_academy_admin?text=${message}`;
+      window.open(tgUrl, '_blank');
+    }
+
+    function handleInlineBooking(e) {
+      e.preventDefault();
+      const name = document.getElementById('inlineStudentName').value;
+      const course = document.getElementById('inlineCourseSelect').value;
+      const phone = document.getElementById('inlineStudentPhone').value;
+      dispatchTelegramBooking(name, course, phone);
+      alert(currentLang === 'uz' ? "Rahmat! Arizangiz qabul qilindi. Tez orada siz bilan bog'lanamiz." : "Спасибо! Ваша заявка принята. Администратор свяжется с вами.");
+    }
+
+    function handleModalBooking(e) {
+      e.preventDefault();
+      const name = document.getElementById('modalStudentName').value;
+      const course = document.getElementById('modalCourseSelect').value;
+      const phone = document.getElementById('modalStudentPhone').value;
+      dispatchTelegramBooking(name, course, phone);
+      closeBookingModal();
+      alert(currentLang === 'uz' ? "Rahmat! Arizangiz qabul qilindi. Tez orada siz bilan bog'lanamiz." : "Спасибо! Ваша заявка принята. Администратор свяжется с вами.");
+    }
+
+    // --- 8. BALANCE CHECK MOCK DATABASE ---
+    const balanceDb = {
+      '+998901234567': {
+        name: 'Азизбек Каримов',
+        course: 'Python-программирование (Группа PY-104)',
+        remainingLessons: 14,
+        totalLessons: 24,
+        status: 'Оплачено (Фаол)',
+        nextLesson: 'Среда, 15:30 (Аудитория 2, ThinkPad #4)'
+      },
+      '+998998887766': {
+        name: 'Малика Умарова',
+        course: 'IELTS Intensive 7.5+ (Группа EN-202)',
+        remainingLessons: 8,
+        totalLessons: 16,
+        status: 'Оплачено (Фаол)',
+        nextLesson: 'Четверг, 10:00 (Аудитория 1)'
+      }
+    };
+
+    function fillTestPhone(phone) {
+      document.getElementById('balancePhoneInput').value = phone;
+      handleCheckBalance(new Event('submit'));
+    }
+
+    function handleCheckBalance(e) {
+      if (e) e.preventDefault();
+      const input = document.getElementById('balancePhoneInput').value.replace(/\s+/g, '').replace(/[()-]/g, '');
+      const resBox = document.getElementById('balanceResult');
+      resBox.classList.remove('hidden');
+
+      // lookup
+      let match = null;
+      for (const key in balanceDb) {
+        if (key.replace(/\D/g, '') === input.replace(/\D/g, '')) {
+          match = balanceDb[key];
+          break;
+        }
+      }
+
+      if (match) {
+        resBox.innerHTML = `
+          <div class="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-emerald-800 dark:text-emerald-300 font-mono">ID: MAM-${input.slice(-4)}</span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-600 text-white">${match.status}</span>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white">${match.name}</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">${match.course}</p>
+            <div class="grid grid-cols-2 gap-3 mt-4 pt-3 border-t border-emerald-200 dark:border-emerald-800/60 text-xs">
+              <div>
+                <span class="text-slate-500 dark:text-slate-400">Остаток занятий:</span>
+                <p class="font-bold text-sm text-emerald-700 dark:text-emerald-400 font-mono">${match.remainingLessons} из ${match.totalLessons} уроков</p>
+              </div>
+              <div>
+                <span class="text-slate-500 dark:text-slate-400">Следующий урок:</span>
+                <p class="font-semibold text-slate-800 dark:text-slate-200">${match.nextLesson}</p>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        resBox.innerHTML = `
+          <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs">
+            <p class="font-bold">Ученик с таким номером не найден в базе активных групп.</p>
+            <p class="mt-1 text-slate-500 dark:text-slate-400">Проверьте правильность введённого номера или обратитесь в приёмную: +998 (90) 123-45-67.</p>
+          </div>
+        `;
+      }
+      lucide.createIcons();
+    }
+
+    // --- 9. CERTIFICATE REGISTRY DATABASE ---
+    const certDb = {
+      'MAM-2024-0891': {
+        id: 'MAM-2024-0891',
+        student: 'Сардорбек Алимов',
+        course: 'Python Software Engineering & Algorithms',
+        grade: 'Отлично (A+ / 96%)',
+        date: '18 Декабря 2024',
+        director: 'Богданов Т.Я. (Bogdanov T.Y.)',
+        status: 'ДЕЙСТВИТЕЛЕН / HAQIQIY'
+      },
+      'MAM-2025-1042': {
+        id: 'MAM-2025-1042',
+        student: 'Дильноза Юсупова',
+        course: 'Full-Stack Web Development (React & Node.js)',
+        grade: 'С отличием (Honors / 98%)',
+        date: '14 Февраля 2025',
+        director: 'Богданов Т.Я. (Bogdanov T.Y.)',
+        status: 'ДЕЙСТВИТЕЛЕН / HAQIQIY'
+      }
+    };
+
+    function fillTestCert(id) {
+      document.getElementById('certIdInput').value = id;
+      handleCheckCertificate(new Event('submit'));
+    }
+
+    function handleCheckCertificate(e) {
+      if (e) e.preventDefault();
+      const rawInput = document.getElementById('certIdInput').value.trim().toUpperCase();
+      const resBox = document.getElementById('certResult');
+      resBox.classList.remove('hidden');
+
+      const cert = certDb[rawInput];
+
+      if (cert) {
+        resBox.innerHTML = `
+          <div class="p-6 rounded-2xl bg-gradient-to-br from-indigo-50/70 to-slate-50 dark:from-indigo-950/40 dark:to-slate-900 border-2 border-indigo-500/40 shadow-md">
+            <div class="flex items-center justify-between pb-4 border-b border-indigo-200 dark:border-indigo-800">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 font-mono tracking-wider">${cert.status}</span>
+              </div>
+              <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400">№ ${cert.id}</span>
+            </div>
+
+            <div class="mt-4">
+              <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Выпускник академии MAM:</span>
+              <h3 class="text-xl font-extrabold text-slate-900 dark:text-white mt-0.5">${cert.student}</h3>
+            </div>
+
+            <div class="mt-3">
+              <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Успешно освоенная программа:</span>
+              <p class="text-sm font-bold text-indigo-700 dark:text-indigo-400">${cert.course}</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4 pt-4 border-t border-indigo-100 dark:border-indigo-900 text-xs">
+              <div>
+                <span class="text-slate-400">Итоговая оценка:</span>
+                <p class="font-bold text-slate-800 dark:text-slate-200">${cert.grade}</p>
+              </div>
+              <div>
+                <span class="text-slate-400">Дата выпуска:</span>
+                <p class="font-medium text-slate-800 dark:text-slate-200 font-mono">${cert.date}</p>
+              </div>
+              <div class="col-span-2 sm:col-span-1">
+                <span class="text-slate-400">Подпись директора:</span>
+                <p class="font-bold text-slate-900 dark:text-white flex items-center gap-1">
+                  <span>${cert.director}</span>
+                  <i data-lucide="badge-check" class="w-4 h-4 text-emerald-500 inline"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-dashed border-indigo-200 dark:border-indigo-800/80 flex items-center justify-between text-[11px] text-slate-500">
+              <span>Maryam Academy Mission • Реестр официальных дипломов</span>
+              <span class="font-mono text-emerald-600 dark:text-emerald-400">Штамп верифицирован</span>
+            </div>
+          </div>
+        `;
+      } else {
+        resBox.innerHTML = `
+          <div class="p-4 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-rose-900 dark:text-rose-200 text-xs">
+            <p class="font-bold">Сертификат с номером "${rawInput}" не найден в официальном реестре MAM.</p>
+            <p class="mt-1 text-slate-500 dark:text-slate-400">Пожалуйста, проверьте введённый номер или обратитесь в учебную часть академии для ручной верификации.</p>
+          </div>
+        `;
+      }
+      lucide.createIcons();
+    }
+
+    // --- 10. 2D FLOOR MAP LOGIC ---
+    const campusRooms = {
+      room1: {
+        id: 'room1',
+        titleRu: 'Кабинет 1 — Python & Data Science Lab',
+        titleUz: '1-xona — Python va Data Science laboratoriyasi',
+        badge: '💻 IT-Лаборатория №1',
+        badgeUz: '💻 IT-Laboratoriya №1',
+        mentorName: 'Исломбек Каримов',
+        mentorRole: 'Senior Python & Django Mentor (5+ лет опыта)',
+        mentorInitials: 'ИК',
+        mentorBg: 'from-emerald-600 to-teal-500',
+        courseName: 'Python-программирование',
+        scheduleEven: 'Пн / Ср / Пт: 09:00–11:00 (утро), 14:00–16:00 (день), 16:30–18:30 (вечер)',
+        scheduleOdd: 'Вт / Чт / Сб: 09:00–11:00 (утро), 14:00–16:00 (день), 16:30–18:30 (вечер)',
+        equipmentRu: '10 персональных ноутбуков Lenovo ThinkPad T480s, интерактивная 4K панель 75", сервер для тестов, кондиционер Clivet, Wi-Fi 6.',
+        equipmentUz: '10 ta shaxsiy Lenovo ThinkPad noutbuki, 75 dyuymli 4K interaktiv ekran, test serveri, Clivet sovutish tizimi, Wi-Fi 6.'
+      },
+      room2: {
+        id: 'room2',
+        titleRu: 'Кабинет 2 — Веб-разработка (Frontend/Backend)',
+        titleUz: '2-xona — Web dasturlash (Frontend/Backend)',
+        badge: '💻 IT-Лаборатория №2',
+        badgeUz: '💻 IT-Laboratoriya №2',
+        mentorName: 'Сардор Умаров',
+        mentorRole: 'Full-Stack Engineer (React, Node.js, PostgreSQL)',
+        mentorInitials: 'СУ',
+        mentorBg: 'from-teal-600 to-cyan-600',
+        courseName: 'Веб-разработка (Frontend/Backend)',
+        scheduleEven: 'Пн / Ср / Пт: 09:00–11:00 (утро), 14:00–16:00 (день), 16:30–18:30 (вечер)',
+        scheduleOdd: 'Вт / Чт / Сб: 09:00–11:00 (утро), 14:00–16:00 (день), 16:30–18:30 (вечер)',
+        equipmentRu: '10 ноутбуков ThinkPad с предустановленным Node.js, Git, VS Code, локальные Docker стенды, проектор Full HD.',
+        equipmentUz: 'Node.js, Git, VS Code o\'rnatilgan 10 ta ThinkPad noutbuki, Docker muhiti, Full HD proyektor.'
+      },
+      room3: {
+        id: 'room3',
+        titleRu: 'Кабинет 3 — UI/UX Дизайн & Мультимедиа',
+        titleUz: '3-xona — UI/UX Dizayn va multimedia',
+        badge: '💻 IT-Лаборатория №3',
+        badgeUz: '💻 IT-Laboratoriya №3',
+        mentorName: 'Мадина Рахимова',
+        mentorRole: 'Product & UI/UX Designer (Top Behance Creator)',
+        mentorInitials: 'МР',
+        mentorBg: 'from-indigo-600 to-purple-600',
+        courseName: 'UI/UX Дизайн',
+        scheduleEven: 'Пн / Ср / Пт: 10:00–12:00, 14:30–16:30',
+        scheduleOdd: 'Вт / Чт / Сб: 10:00–12:00, 14:30–16:30',
+        equipmentRu: 'Калиброванные 4K IPS мониторы 27", графические планшеты Wacom, лицензионные Figma & Adobe CC, эргономичные кресла.',
+        equipmentUz: '27 dyuymli 4K IPS monitorlar, Wacom grafik planshetlari, litsenziyalangan Figma & Adobe CC, qulay kreslolar.'
+      },
+      room4: {
+        id: 'room4',
+        titleRu: 'Кабинет 4 — Английский язык (IELTS Speaking Pods)',
+        titleUz: '4-xona — Ingliz tili (IELTS Speaking Pods)',
+        badge: '🗣 Языковая аудитория №4',
+        badgeUz: '🗣 Til xonasi №4',
+        mentorName: 'Зухра Хасанова',
+        mentorRole: 'Head IELTS Instructor (Official Band 8.5)',
+        mentorInitials: 'ЗХ',
+        mentorBg: 'from-blue-600 to-indigo-600',
+        courseName: 'Английский язык (IELTS)',
+        scheduleEven: 'Пн / Ср / Пт: 08:30–10:30, 11:00–13:00, 15:00–17:00, 17:30–19:30',
+        scheduleOdd: 'Вт / Чт / Сб: 08:30–10:30, 11:00–13:00, 15:00–17:00, 17:30–19:30',
+        equipmentRu: 'Звукоизолированные наушники с шумоподавлением для IELTS Listening/Speaking, Smart-доска, оригинальные кембриджские книги.',
+        equipmentUz: 'IELTS Listening/Speaking uchun shovqinsiz quloqchinlar, Smart-doska, Kembrijning original o\'quv qo\'llanmalari.'
+      },
+      room5: {
+        id: 'room5',
+        titleRu: 'Кабинет 5 — Корейский язык (TOPIK Cultural Hub)',
+        titleUz: '5-xona — Koreys tili (TOPIK Cultural Hub)',
+        badge: '🗣 Языковая аудитория №5',
+        badgeUz: '🗣 Til xonasi №5',
+        mentorName: 'Нигора Турсунова',
+        mentorRole: 'TOPIK Level 6 Specialist (Yonsei University Alumni)',
+        mentorInitials: 'НТ',
+        mentorBg: 'from-rose-600 to-pink-600',
+        courseName: 'Корейский язык (TOPIK)',
+        scheduleEven: 'Пн / Ср / Пт: 09:00–11:00, 14:00–16:00, 16:30–18:30',
+        scheduleOdd: 'Вт / Чт / Сб: 09:00–11:00, 14:00–16:00, 16:30–18:30',
+        equipmentRu: 'Учебные материалы Yonsei & Sogang, аудио-система для тестов аудирования TOPIK I/II, интерактивная доска.',
+        equipmentUz: 'Yonsei & Sogang o\'quv adabiyotlari, TOPIK I/II tinglash testlari uchun audio-tizim, interaktiv doska.'
+      },
+      room6: {
+        id: 'room6',
+        titleRu: 'Кабинет 6 — Немецкий язык (Goethe Sprachraum)',
+        titleUz: '6-xona — Nemis tili (Goethe Sprachraum)',
+        badge: '🗣 Языковая аудитория №6',
+        badgeUz: '🗣 Til xonasi №6',
+        mentorName: 'Анвар Муродов',
+        mentorRole: 'Goethe C1 Zertifikat Mentor (ТУ Мюнхен)',
+        mentorInitials: 'АМ',
+        mentorBg: 'from-amber-600 to-orange-600',
+        courseName: 'Немецкий язык (Goethe)',
+        scheduleEven: 'Пн / Ср / Пт: 10:00–12:00, 15:00–17:00',
+        scheduleOdd: 'Вт / Чт / Сб: 10:00–12:00, 15:00–17:00',
+        equipmentRu: 'Немецкие учебники Schritte & Aspekte (Hueber), аудиотека экзаменационных тестов B1/B2/C1, мультимедиа стенд.',
+        equipmentUz: 'Nemischa Schritte & Aspekte (Hueber) darsliklari, B1/B2/C1 imtihon testlari audio-bazasi, multimedia stendi.'
+      },
+      reception: {
+        id: 'reception',
+        titleRu: 'Ресепшен & Welcome Lounge',
+        titleUz: 'Resepshn va Welcome Lounge',
+        badge: '☕ Администрация и Гостевая зона',
+        badgeUz: '☕ Ma\'muriyat va mehmonlar hududi',
+        mentorName: 'Администрация MAM',
+        mentorRole: 'Координаторы обучения и приёмная комиссия',
+        mentorInitials: 'MAM',
+        mentorBg: 'from-slate-700 to-slate-900',
+        courseName: '',
+        scheduleEven: 'Пн — Сб: 08:30 – 20:30 (без перерыва)',
+        scheduleOdd: 'Воскресенье: 10:00 – 16:00 (день проектов и консультаций)',
+        equipmentRu: 'Кофейная станция DeLonghi, зона ожидания для родителей, терминалы оплат Click/Payme, высокоскоростной Wi-Fi.',
+        equipmentUz: 'DeLonghi kofe stansiyasi, ota-onalar uchun kutish divanlari, Click/Payme to\'lov terminallari, tezkor Wi-Fi.'
+      }
+    };
+
+    let selectedRoomId = 'room1';
+
+    function selectRoom(roomId) {
+      selectedRoomId = roomId;
+      const room = campusRooms[roomId];
+      if (!room) return;
+
+      // Update room highlight styles
+      Object.keys(campusRooms).forEach(id => {
+        const el = document.getElementById('roomBtn-' + id);
+        if (el) {
+          if (id === roomId) {
+            el.classList.add('ring-4', 'ring-emerald-400', 'bg-slate-800');
+            el.classList.remove('opacity-60');
+          } else {
+            el.classList.remove('ring-4', 'ring-emerald-400');
+          }
+        }
+      });
+
+      const inspector = document.getElementById('roomInspectorCard');
+      const isUz = currentLang === 'uz';
+      const title = isUz ? room.titleUz : room.titleRu;
+      const badge = isUz ? room.badgeUz : room.badge;
+      const equipment = isUz ? room.equipmentUz : room.equipmentRu;
+
+      inspector.innerHTML = `
+        <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300">
+            ${badge}
+          </span>
+          <span class="text-xs font-mono text-slate-400">Кампус Маргилан</span>
+        </div>
+
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-4">${title}</h3>
+
+        <div class="flex items-center gap-3.5 my-5 p-3.5 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr ${room.mentorBg} text-white flex items-center justify-center font-bold font-mono text-sm shrink-0">
+            ${room.mentorInitials}
+          </div>
+          <div>
+            <div class="text-xs text-slate-400 font-medium">${isUz ? 'Biriktirilgan ustoz:' : 'Закреплённый наставник:'}</div>
+            <h4 class="text-sm font-bold text-slate-900 dark:text-white leading-tight">${room.mentorName}</h4>
+            <p class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono mt-0.5">${room.mentorRole}</p>
+          </div>
+        </div>
+
+        <div class="space-y-3.5 text-xs text-slate-600 dark:text-slate-300">
+          <div>
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 mb-1">
+              <i data-lucide="calendar" class="w-4 h-4 text-emerald-500"></i> ${isUz ? 'Smenalar jadvali:' : 'Расписание смен:'}
+            </span>
+            <div class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/60 font-mono text-[11px] space-y-1">
+              <p><span class="text-emerald-600 dark:text-emerald-400 font-bold">•</span> ${room.scheduleEven}</p>
+              <p><span class="text-emerald-600 dark:text-emerald-400 font-bold">•</span> ${room.scheduleOdd}</p>
+            </div>
+          </div>
+
+          <div>
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 mb-1">
+              <i data-lucide="cpu" class="w-4 h-4 text-emerald-500"></i> ${isUz ? 'Texnik jihozlanishi:' : 'Техническое оснащение:'}
+            </span>
+            <p class="leading-relaxed text-slate-500 dark:text-slate-400">${equipment}</p>
+          </div>
+        </div>
+
+        <div class="pt-5 mt-5 border-t border-slate-200 dark:border-slate-800">
+          ${room.courseName ? `
+            <button onclick="openBookingModal('${room.courseName}')" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="user-check" class="w-4 h-4"></i>
+              <span>${isUz ? "Ushbu xonadagi darsga yozilish" : "Записаться на занятие в этом кабинете"}</span>
+            </button>
+          ` : `
+            <button onclick="openBookingModal()" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>${isUz ? "Qabulxonaga savol berish" : "Задать вопрос приёмной MAM"}</span>
+            </button>
+          `}
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    function filterMapRooms(category) {
+      ['all', 'it', 'lang', 'reception'].forEach(cat => {
+        const btn = document.getElementById('mapFilter-' + cat);
+        if (btn) {
+          if (cat === category) {
+            btn.className = "px-4 py-2 rounded-xl text-xs font-bold transition-all bg-emerald-600 text-white shadow-sm";
+          } else {
+            btn.className = "px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700";
+          }
+        }
+      });
+
+      const itRooms = ['room1', 'room2', 'room3'];
+      const langRooms = ['room4', 'room5', 'room6'];
+      const reception = ['reception'];
+
+      Object.keys(campusRooms).forEach(id => {
+        const el = document.getElementById('roomBtn-' + id);
+        if (!el) return;
+        if (category === 'all') {
+          el.style.opacity = '1';
+        } else if (category === 'it') {
+          el.style.opacity = itRooms.includes(id) ? '1' : '0.25';
+        } else if (category === 'lang') {
+          el.style.opacity = langRooms.includes(id) ? '1' : '0.25';
+        } else if (category === 'reception') {
+          el.style.opacity = reception.includes(id) ? '1' : '0.25';
+        }
+      });
+
+      if (category === 'it') selectRoom('room1');
+      else if (category === 'lang') selectRoom('room4');
+      else if (category === 'reception') selectRoom('reception');
+    }
+
+    // --- 11. TEACHER REELS / SHORTS (9:16) VIDEO SIMULATOR ---
+    const reelsData = {
+      1: {
+        id: 1,
+        name: 'Исломбек Каримов',
+        role: 'Senior Python & Django Mentor',
+        initials: 'ИК',
+        course: 'Python-программирование',
+        likes: 1420,
+        subtitlesRu: [
+          '«Ассалому алайкум! Меня зовут Исломбек, я преподаю Python в MAM.»',
+          '«На курсе мы пишем не скучную теорию, а реальные Telegram-боты и backend!»',
+          '«Каждому ученику мы даем настроенный ThinkPad. Жду вас на Sinov Darsi!»'
+        ],
+        subtitlesUz: [
+          "«Assalomu alaykum! Ismim Islombek, MAM'da Python fanidan dars beraman.»",
+          "«Bizda quruq nazariya yo'q, haqiqiy Telegram-botlar va veb-backend quramiz!»",
+          "«Har bir o'quvchiga ThinkPad noutbuki beriladi. Birinchi bepul darsda kutaman!»"
+        ],
+        themeColor: '#10b981'
+      },
+      2: {
+        id: 2,
+        name: 'Сардор Умаров',
+        role: 'Full-Stack (React & Node.js)',
+        initials: 'СУ',
+        course: 'Веб-разработка (Frontend/Backend)',
+        likes: 1280,
+        subtitlesRu: [
+          '«Привет! Я Сардор, Full-Stack разработчик в академии Maryam.»',
+          '«Освоим современный стек: React, Tailwind, Node.js и базы данных.»',
+          '«После выпуска у вас будет готовое портфолио из 4 работающих проектов!»'
+        ],
+        subtitlesUz: [
+          "«Salom! Men Sardorman, MAM akademiyasida Full-Stack dasturchiman.»",
+          "«Zamonaviy texnologiyalarni o'rganamiz: React, Tailwind, Node.js va SQL.»",
+          "«Kurs yakunida 4 ta tayyor real loyihangiz bo'ladi. Sinov darsiga keling!»"
+        ],
+        themeColor: '#0d9488'
+      },
+      3: {
+        id: 3,
+        name: 'Мадина Рахимова',
+        role: 'Product & UI/UX Designer',
+        initials: 'МР',
+        course: 'UI/UX Дизайн',
+        likes: 1950,
+        subtitlesRu: [
+          '«Привет! Я Мадина. Дизайн — это не просто картинки, это логика продукта.»',
+          '«Научу создавать мобильные приложения в Figma, которые влюбляют клиентов.»',
+          '«Записывайтесь на пробный урок — разберем ваш первый крутой макет!»'
+        ],
+        subtitlesUz: [
+          "«Salom! Men Madinaman. Dizayn shunchaki rasm emas, mahsulot mantig'idir.»",
+          "«Figma'da xalqaro standartdagi interfeyslar va mobil ilovalar chizamiz.»",
+          "«Sinov darsiga yoziling — ilk dizayn loyihangizni birga yaratamiz!»"
+        ],
+        themeColor: '#6366f1'
+      },
+      4: {
+        id: 4,
+        name: 'Зухра Хасанова',
+        role: 'Head IELTS Instructor (Band 8.5)',
+        initials: 'ЗХ',
+        course: 'Английский язык (IELTS)',
+        likes: 2450,
+        subtitlesRu: [
+          '«Welcome! I am Zukhra Hasanova, Head IELTS mentor at Maryam Academy.»',
+          '«Our secret: Speaking audio pods, deep essay analysis and mock exams every week.»',
+          '«More than 70 students hit Band 7.0+. Your global future starts here!»'
+        ],
+        subtitlesUz: [
+          "«Welcome! Men Zuhra Hasanovaman, IELTS rasmiy Band 8.5 sohibasiman.»",
+          "«Bizda audio-podlar orqali ravon Speaking va haftalik real Mock-testlar bor.»",
+          "«70 dan ortiq o'quvchim 7.0+ ball oldi. Birinchi sinov darsiga kutib qolaman!»"
+        ],
+        themeColor: '#3b82f6'
+      },
+      5: {
+        id: 5,
+        name: 'Анвар Муродов',
+        role: 'Goethe C1 Mentor (TU Munich)',
+        initials: 'АМ',
+        course: 'Немецкий язык (Goethe)',
+        likes: 1120,
+        subtitlesRu: [
+          '«Guten Tag! Я Анвар Муродов. Обучался в Мюнхене и знаю все тонкости Германии.»',
+          '«Готовим к сдаче Goethe Zertifikat B1/B2 для бесплатного высшего образования.»',
+          '«Приходите на Sinov Darsi, начнем путь к европейскому диплому!»'
+        ],
+        subtitlesUz: [
+          "«Guten Tag! Men Anvar Murodov, Myunxen Texnika Universiteti bitiruvchisiman.»",
+          "«Germaniyada bepul o'qish va Ausbildung uchun Goethe B1/B2 ga tayyorlaymiz.»",
+          "«Sinov darsida nemis tilini noldan o'rganish xaritasini tuzib beraman!»"
+        ],
+        themeColor: '#f59e0b'
+      },
+      6: {
+        id: 6,
+        name: 'Нигора Турсунова',
+        role: 'TOPIK Level 6 Specialist',
+        initials: 'НТ',
+        course: 'Корейский язык (TOPIK)',
+        likes: 1840,
+        subtitlesRu: [
+          '«Аннёнхасэйо! Я Нигора, окончила Yonsei University в Сеуле.»',
+          '«Обучаю живому корейскому языку и подготовке к TOPIK с гарантией результата.»',
+          '«Помогу с документами на корейские гранты GKS. До встречи в MAM!»'
+        ],
+        subtitlesUz: [
+          "«Annyonghaseyo! Ismim Nigora, Seuldagi Yonsei Universitetini tamomlaganman.»",
+          "«TOPIK imtihonlariga va Koreya hukumat grantlariga (GKS) tayyorlaymiz.»",
+          "«Sinov darsiga yoziling, koreys tilini eng to'g'ri talaffuzda boshlaymiz!»"
+        ],
+        themeColor: '#f43f5e'
+      }
+    };
+
+    let activeReel = null;
+    let reelTimer = null;
+    let reelSeconds = 0;
+    let isReelPlaying = false;
+    let isReelAudioOn = true;
+    let reelCanvasAnimId = null;
+    let audioContext = null;
+
+    function openVideoReel(teacherId) {
+      activeReel = reelsData[teacherId];
+      if (!activeReel) return;
+
+      const modal = document.getElementById('videoReelModal');
+      modal.classList.remove('hidden');
+
+      document.getElementById('reelAvatar').textContent = activeReel.initials;
+      document.getElementById('reelAvatar').style.backgroundColor = activeReel.themeColor;
+      document.getElementById('reelTeacherName').textContent = activeReel.name;
+      document.getElementById('reelTeacherRole').textContent = activeReel.role;
+      document.getElementById('reelLikeCount').textContent = activeReel.likes;
+      document.getElementById('reelCtaText').textContent = currentLang === 'uz' ? "Ustoz darsiga yozilish" : "Записаться к преподавателю";
+
+      reelSeconds = 0;
+      isReelPlaying = true;
+      updateReelPlayPauseIcon(true);
+      startReelLoop();
+      startReelCanvasAnimation();
+      lucide.createIcons();
+    }
+
+    function closeVideoReel() {
+      const modal = document.getElementById('videoReelModal');
+      modal.classList.add('hidden');
+      isReelPlaying = false;
+      if (reelTimer) clearInterval(reelTimer);
+      if (reelCanvasAnimId) cancelAnimationFrame(reelCanvasAnimId);
+      if (audioContext && audioContext.state !== 'closed') {
+        try { audioContext.suspend(); } catch(e) {}
+      }
+    }
+
+    function startReelLoop() {
+      if (reelTimer) clearInterval(reelTimer);
+      reelTimer = setInterval(() => {
+        if (!isReelPlaying) return;
+        reelSeconds += 0.2;
+        const progressPct = Math.min((reelSeconds / 15) * 100, 100);
+        document.getElementById('reelProgressBar').style.width = progressPct + '%';
+
+        // Update Subtitles
+        const subs = currentLang === 'uz' ? activeReel.subtitlesUz : activeReel.subtitlesRu;
+        const subIndex = Math.min(Math.floor((reelSeconds / 15) * subs.length), subs.length - 1);
+        document.getElementById('reelSubtitles').textContent = subs[subIndex];
+
+        // Beep/ambient chime if audio is enabled
+        if (isReelAudioOn && Math.floor(reelSeconds * 10) % 20 === 0) {
+          playSoftChime();
+        }
+
+        if (reelSeconds >= 15) {
+          reelSeconds = 0; // Loop reel
+        }
+      }, 200);
+    }
+
+    function toggleReelPlayPause() {
+      isReelPlaying = !isReelPlaying;
+      updateReelPlayPauseIcon(isReelPlaying);
+    }
+
+    function updateReelPlayPauseIcon(playing) {
+      const icon = document.getElementById('reelPlayPauseIcon');
+      if (icon) {
+        icon.setAttribute('data-lucide', playing ? 'pause' : 'play');
+        lucide.createIcons();
+      }
+    }
+
+    function toggleReelAudio() {
+      isReelAudioOn = !isReelAudioOn;
+      const icon = document.getElementById('reelSoundIcon');
+      if (icon) {
+        icon.setAttribute('data-lucide', isReelAudioOn ? 'volume-2' : 'volume-x');
+        lucide.createIcons();
+      }
+      if (isReelAudioOn) playSoftChime();
+    }
+
+    function toggleReelLike() {
+      const icon = document.getElementById('reelLikeIcon');
+      const countEl = document.getElementById('reelLikeCount');
+      if (icon.classList.contains('text-rose-500')) {
+        icon.classList.remove('text-rose-500', 'fill-rose-500');
+        icon.classList.add('text-white');
+        activeReel.likes -= 1;
+      } else {
+        icon.classList.remove('text-white');
+        icon.classList.add('text-rose-500', 'fill-rose-500');
+        activeReel.likes += 1;
+      }
+      countEl.textContent = activeReel.likes;
+    }
+
+    function shareReel() {
+      const url = window.location.origin + '#teachers';
+      navigator.clipboard?.writeText(url);
+      alert(currentLang === 'uz' ? "Video havola nusxalandi!" : "Ссылка на видео скопирована в буфер обмена!");
+    }
+
+    function bookFromReel() {
+      if (!activeReel) return;
+      const course = activeReel.course;
+      closeVideoReel();
+      openBookingModal(course);
+    }
+
+    // Audio chime synthesis for native in-browser sound effect
+    function playSoftChime() {
+      try {
+        if (!audioContext) {
+          audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioContext.state === 'suspended') {
+          audioContext.resume();
+        }
+        const osc = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(440 + (activeReel ? activeReel.id * 50 : 0), audioContext.currentTime);
+        gain.gain.setValueAtTime(0.04, audioContext.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.35);
+        osc.connect(gain);
+        gain.connect(audioContext.destination);
+        osc.start();
+        osc.stop(audioContext.currentTime + 0.35);
+      } catch(e) {}
+    }
+
+    // Canvas animation for live video background
+    function startReelCanvasAnimation() {
+      const canvas = document.getElementById('reelCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let angle = 0;
+
+      function render() {
+        if (!isReelPlaying) {
+          reelCanvasAnimId = requestAnimationFrame(render);
+          return;
+        }
+        angle += 0.03;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Animated gradient background
+        const grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        grad.addColorStop(0, '#0f172a');
+        grad.addColorStop(0.5, activeReel ? activeReel.themeColor + '33' : '#04785733');
+        grad.addColorStop(1, '#020617');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Waveform bars representing voice/speech in center
+        ctx.fillStyle = activeReel ? activeReel.themeColor : '#34d399';
+        const bars = 20;
+        const barWidth = 4;
+        const startX = (canvas.width - bars * 8) / 2;
+        const centerY = canvas.height * 0.48;
+
+        for (let i = 0; i < bars; i++) {
+          const h = 15 + Math.sin(angle * 2 + i * 0.6) * 35 * (isReelAudioOn ? 1 : 0.2);
+          ctx.fillRect(startX + i * 8, centerY - h / 2, barWidth, h);
+        }
+
+        // Animated bokeh particles
+        for (let j = 0; j < 12; j++) {
+          const px = (canvas.width * 0.1) + ((j * 43 + angle * 30) % (canvas.width * 0.8));
+          const py = (canvas.height * 0.2) + ((j * 67 + Math.sin(angle + j) * 80) % (canvas.height * 0.5));
+          ctx.beginPath();
+          ctx.arc(px, py, 2 + (j % 3), 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255, 255, 255, 0.25)';
+          ctx.fill();
+        }
+
+        reelCanvasAnimId = requestAnimationFrame(render);
+      }
+      render();
+    }
+
+    // --- 12. PHONE INPUT MASKS ---
+    function setupPhoneMask(id) {
+      const input = document.getElementById(id);
+      if (!input) return;
+      input.addEventListener('focus', function() {
+        if (!input.value.startsWith('+998')) {
+          input.value = '+998 ';
+        }
+      });
+      input.addEventListener('input', function() {
+        let val = input.value.replace(/[^\d+]/g, '');
+        if (!val.startsWith('+998')) {
+          val = '+998' + val.replace(/\+/g, '');
+        }
+        input.value = val;
+      });
+    }
+
+    // Initialize on DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      initTheme();
+      setLanguage(currentLang);
+      selectRoom('room1');
+      setupPhoneMask('inlineStudentPhone');
+      setupPhoneMask('modalStudentPhone');
+      setupPhoneMask('balancePhoneInput');
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
